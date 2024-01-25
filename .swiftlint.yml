@@ -1,0 +1,114 @@
+disabled_rules:
+  - implicit_return # Implicit return should not be a strict rule.
+
+opt_in_rules:
+  - closure_end_indentation # Closure end should have the same indentation as the line that started it.
+  - closure_spacing # Closure expressions should have a single space inside each brace.
+  - empty_count # Prefer checking isEmpty over comparing count to zero.
+  - explicit_init # Explicitly calling .init() should be avoided.
+  - first_where # Prefer using .first(where:) over .filter { }.first in collections.
+  - force_unwrapping # Force unwrapping should be avoided
+  - multiline_parameters # Functions and methods parameters should be either on the same line, or one per line.
+  - object_literal # Prefer object literals over image and color inits.
+  - operator_usage_whitespace # Operators should be surrounded by a single whitespace when they are being used.
+  - overridden_super_call # Some overridden methods should always call super
+  - private_action # IBActions should be private.
+  - private_outlet # IBOutlets should be private to avoid leaking UIKit to higher layers.
+  - redundant_nil_coalescing # nil coalescing operator is only evaluated if the lhs is nil, coalescing operator with nil as rhs is redundant
+  - single_test_class # Test files should contain a single QuickSpec or XCTestCase class.
+  - sorted_imports # Imports should be sorted.
+  - unneeded_parentheses_in_closure_argument # Parentheses are not needed when declaring closure arguments.
+  - unused_optional_binding # Prefer != nil over let _ =
+  - vertical_parameter_alignment_on_call # Function parameters should be aligned vertically if they’re in multiple lines in a method call.
+  - weak_delegate # Delegates should be weak to avoid reference cycles
+
+excluded:
+  - Pods
+  - DialogDroid/Sources/Generated/R.generated.swift
+
+type_body_length:
+  warning: 600
+  error: 1200
+
+file_length:
+  warning: 1000
+  error: 2000
+
+line_length:
+  warning: 120
+  error: 240
+  ignores_urls: true
+  ignores_comments: true
+  ignores_interpolated_strings: true
+
+function_body_length:
+  warning: 60
+  error: 120
+
+function_parameter_count:
+  warning: 8
+  error: 14
+
+identifier_name:
+  min_length: 1
+  max_length: 60
+
+large_tuple:
+  warning: 4
+  error: 6
+
+cyclomatic_complexity:
+  ignores_case_statements: true
+
+type_name:
+  max_length:
+    warning: 60
+    error: 120
+
+nesting:
+  type_level: 3
+  function_level: 4
+
+control_statement:
+  warning
+
+force_cast:
+  warning
+
+force_try:
+  warning
+
+implicit_getter:
+  warning
+
+redundant_optional_initialization:
+  warning
+
+return_arrow_whitespace:
+  warning
+
+syntactic_sugar:
+  warning
+
+trailing_whitespace:
+  warning
+
+trailing_whitespace:
+  ignores_empty_lines: true
+
+unneeded_break_in_switch:
+  warning
+
+vertical_parameter_alignment:
+  warning
+
+custom_rules:
+  mark_without_minus_sign:
+    regex: "(\\/\\/ )+([MARK])\\w+\\:+\\ +(?!-)"
+  service_layer_injection:
+    name: "Service layer DI"
+    regex: "(ServiceLayer\\.shared\\.\\w+\\.)|(ServiceLayer\\.shared\\s+)"
+    match_kinds:
+      - identifier
+    message: "Pass the services as dependencies via init"
+
