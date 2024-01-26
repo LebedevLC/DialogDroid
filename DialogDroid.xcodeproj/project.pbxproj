@@ -14,6 +14,10 @@
 		462B74D42B62C4B500319B06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 462B74D32B62C4B500319B06 /* Assets.xcassets */; };
 		462B74D72B62C4B500319B06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462B74D52B62C4B500319B06 /* LaunchScreen.storyboard */; };
 		462B74E32B62C5FA00319B06 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462B74E22B62C5FA00319B06 /* R.generated.swift */; };
+		465114F72B641BC50047F357 /* SettingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465114F62B641BC50047F357 /* SettingsScreenViewController.swift */; };
+		465114FB2B641C450047F357 /* SettingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465114F92B641C450047F357 /* SettingsCollectionViewCell.swift */; };
+		465114FC2B641C450047F357 /* SettingsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465114FA2B641C450047F357 /* SettingsCollectionViewCell.xib */; };
+		465115012B641E1D0047F357 /* SettingsScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465115002B641E1D0047F357 /* SettingsScreenModel.swift */; };
 		4666BE482B62D74B00D40241 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666BE472B62D74B00D40241 /* CornerView.swift */; };
 		AB8ECD8F206C99F039CBE635 /* Pods_DialogDroid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA909A4C53EC84651296C718 /* Pods_DialogDroid.framework */; };
 /* End PBXBuildFile section */
@@ -30,6 +34,10 @@
 		462B74D62B62C4B500319B06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		462B74D82B62C4B500319B06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		462B74E22B62C5FA00319B06 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		465114F62B641BC50047F357 /* SettingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewController.swift; sourceTree = "<group>"; };
+		465114F92B641C450047F357 /* SettingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCollectionViewCell.swift; sourceTree = "<group>"; };
+		465114FA2B641C450047F357 /* SettingsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCollectionViewCell.xib; sourceTree = "<group>"; };
+		465115002B641E1D0047F357 /* SettingsScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenModel.swift; sourceTree = "<group>"; };
 		4666BE472B62D74B00D40241 /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		BA909A4C53EC84651296C718 /* Pods_DialogDroid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DialogDroid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,6 +128,7 @@
 		462B74E72B62C76600319B06 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				465114F52B641BB10047F357 /* SettingsScreen */,
 				4666BE452B62D72E00D40241 /* CustomElements */,
 				462B74EA2B62C78000319B06 /* MainScreen */,
 				462B74E92B62C77500319B06 /* Storyboard */,
@@ -150,6 +159,49 @@
 				462B74CE2B62C4B400319B06 /* MainScreenViewController.swift */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		465114F52B641BB10047F357 /* SettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				465114FF2B641DF30047F357 /* Controller */,
+				465114FE2B641DEF0047F357 /* View */,
+				465114FD2B641DEA0047F357 /* Model */,
+			);
+			path = SettingsScreen;
+			sourceTree = "<group>";
+		};
+		465114F82B641C2F0047F357 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				465114F92B641C450047F357 /* SettingsCollectionViewCell.swift */,
+				465114FA2B641C450047F357 /* SettingsCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		465114FD2B641DEA0047F357 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				465115002B641E1D0047F357 /* SettingsScreenModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		465114FE2B641DEF0047F357 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				465114F82B641C2F0047F357 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		465114FF2B641DF30047F357 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				465114F62B641BC50047F357 /* SettingsScreenViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		4666BE452B62D72E00D40241 /* CustomElements */ = {
@@ -250,6 +302,7 @@
 				462B74D72B62C4B500319B06 /* LaunchScreen.storyboard in Resources */,
 				462B74D42B62C4B500319B06 /* Assets.xcassets in Resources */,
 				462B74D22B62C4B400319B06 /* Main.storyboard in Resources */,
+				465114FC2B641C450047F357 /* SettingsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +398,10 @@
 				462B74CF2B62C4B400319B06 /* MainScreenViewController.swift in Sources */,
 				462B74CB2B62C4B400319B06 /* AppDelegate.swift in Sources */,
 				462B74CD2B62C4B400319B06 /* SceneDelegate.swift in Sources */,
+				465114FB2B641C450047F357 /* SettingsCollectionViewCell.swift in Sources */,
 				462B74E32B62C5FA00319B06 /* R.generated.swift in Sources */,
+				465115012B641E1D0047F357 /* SettingsScreenModel.swift in Sources */,
+				465114F72B641BC50047F357 /* SettingsScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

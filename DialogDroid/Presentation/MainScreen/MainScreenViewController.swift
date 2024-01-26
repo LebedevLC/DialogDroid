@@ -29,7 +29,7 @@ class MainScreenViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction private func settingsButtonDidTap(_ sender: Any) {
-        print(#function)
+        performSegue(withIdentifier: "goToSettings", sender: nil)
     }
     
     @IBAction private func shareButtonDidTap(_ sender: Any) {
@@ -49,6 +49,23 @@ class MainScreenViewController: UIViewController {
     // MARK: - Private Methods
     
     private func configureNavigationBar() {
+        #warning("Localization")
         navigationItem.title = "Main Screen"
+    }
+}
+
+// MARK: - Segue
+
+extension MainScreenViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "goToSettings":
+            guard let destinationController = segue.destination as? SettingsScreenViewController else { return }
+            // some data
+            //destinationController
+        default:
+            super.prepare(for: segue, sender: sender)
+        }
     }
 }

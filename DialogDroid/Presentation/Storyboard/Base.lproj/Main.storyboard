@@ -118,11 +118,57 @@
                     <connections>
                         <outlet property="animatedViewContainer" destination="itD-yF-TVW" id="Yxz-mK-1Ea"/>
                         <outlet property="centerLabel" destination="xqQ-K1-Aee" id="SfZ-i5-z8K"/>
+                        <segue destination="2KU-VY-I1T" kind="show" identifier="goToSettings" id="dFu-Pd-RXe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1066.4122137404579" y="4.9295774647887329"/>
+        </scene>
+        <!--Title2-->
+        <scene sceneID="8Ba-4o-6q3">
+            <objects>
+                <viewController id="2KU-VY-I1T" customClass="SettingsScreenViewController" customModule="DialogDroid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R25-8S-aqz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YFa-8X-0EB">
+                                <rect key="frame" x="16" y="111" width="361" height="699"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aws-tb-MmN">
+                                    <size key="itemSize" width="300" height="80"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Kp-YX-owJ"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="3Kp-YX-owJ" firstAttribute="bottom" secondItem="YFa-8X-0EB" secondAttribute="bottom" constant="8" id="Tym-nd-kQd"/>
+                            <constraint firstItem="3Kp-YX-owJ" firstAttribute="trailing" secondItem="YFa-8X-0EB" secondAttribute="trailing" constant="16" id="UA8-lk-QJA"/>
+                            <constraint firstItem="YFa-8X-0EB" firstAttribute="leading" secondItem="3Kp-YX-owJ" secondAttribute="leading" constant="16" id="ZnE-cn-Eud"/>
+                            <constraint firstItem="YFa-8X-0EB" firstAttribute="top" secondItem="3Kp-YX-owJ" secondAttribute="top" constant="8" id="dZf-VT-W2y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title2" style="editor" id="nO1-yR-qZX">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="vmd-0B-WsG">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="backButtonDidTap:" destination="2KU-VY-I1T" id="RCB-3f-ccl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="YFa-8X-0EB" id="F3F-TK-3Oj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OsL-wM-vRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734" y="-627"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jsI-nn-NvL">
@@ -144,6 +190,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left.circle" catalog="system" width="128" height="123"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="link.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">

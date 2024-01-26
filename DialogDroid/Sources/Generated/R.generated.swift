@@ -12,9 +12,14 @@ let R = _R(bundle: Bundle(for: BundleFinder.self))
 
 struct _R {
   let bundle: Foundation.Bundle
+
+  let segue = segue()
+  let reuseIdentifier = reuseIdentifier()
+
   var color: color { .init(bundle: bundle) }
   var image: image { .init(bundle: bundle) }
   var info: info { .init(bundle: bundle) }
+  var nib: nib { .init(bundle: bundle) }
   var storyboard: storyboard { .init(bundle: bundle) }
 
   func color(bundle: Foundation.Bundle) -> color {
@@ -26,10 +31,14 @@ struct _R {
   func info(bundle: Foundation.Bundle) -> info {
     .init(bundle: bundle)
   }
+  func nib(bundle: Foundation.Bundle) -> nib {
+    .init(bundle: bundle)
+  }
   func storyboard(bundle: Foundation.Bundle) -> storyboard {
     .init(bundle: bundle)
   }
   func validate() throws {
+    try self.nib.validate()
     try self.storyboard.validate()
   }
 
@@ -102,6 +111,37 @@ struct _R {
     }
   }
 
+  /// This `_R.segue` struct is generated, and contains static references to 1 view controllers.
+  struct segue {
+    let mainScreenViewController = mainScreenViewController()
+
+    /// This struct is generated for `MainScreenViewController`, and contains static references to 1 segues.
+    struct mainScreenViewController {
+
+      /// Segue identifier `goToSettings`.
+      var goToSettings: RswiftResources.SegueIdentifier<UIKit.UIStoryboardSegue, MainScreenViewController, SettingsScreenViewController> { .init(identifier: "goToSettings") }
+    }
+  }
+
+  /// This `_R.nib` struct is generated, and contains static references to 1 nibs.
+  struct nib {
+    let bundle: Foundation.Bundle
+
+    /// Nib `SettingsCollectionViewCell`.
+    var settingsCollectionViewCell: RswiftResources.NibReferenceReuseIdentifier<SettingsCollectionViewCell, SettingsCollectionViewCell> { .init(name: "SettingsCollectionViewCell", bundle: bundle, identifier: "SettingsCollectionViewCell") }
+
+    func validate() throws {
+      if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "arrow.right.circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'arrow.right.circle' is used in nib 'SettingsCollectionViewCell', but couldn't be loaded.") } }
+    }
+  }
+
+  /// This `_R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+
+    /// Reuse identifier `SettingsCollectionViewCell`.
+    let settingsCollectionViewCell: RswiftResources.ReuseIdentifier<SettingsCollectionViewCell> = .init(identifier: "SettingsCollectionViewCell")
+  }
+
   /// This `_R.storyboard` struct is generated, and contains static references to 2 storyboards.
   struct storyboard {
     let bundle: Foundation.Bundle
@@ -140,6 +180,7 @@ struct _R {
 
       let name = "Main"
       func validate() throws {
+        if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "arrow.left.circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'arrow.left.circle' is used in storyboard 'Main', but couldn't be loaded.") } }
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "gearshape") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'gearshape' is used in storyboard 'Main', but couldn't be loaded.") } }
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "link.circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'link.circle' is used in storyboard 'Main', but couldn't be loaded.") } }
       }
