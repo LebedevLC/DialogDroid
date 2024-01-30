@@ -77,6 +77,14 @@ extension SettingsScreenViewController: UICollectionViewDataSource {
 extension SettingsScreenViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("didSelectItemAt ", screenModel[indexPath.item])
+        switch screenModel[indexPath.item] {
+        case .music:
+            performSegue(withIdentifier: "goToMusicSettings", sender: nil)
+        case .deleteChatHistory:
+            break
+        case .about:
+            break
+        }
     }
 }
 

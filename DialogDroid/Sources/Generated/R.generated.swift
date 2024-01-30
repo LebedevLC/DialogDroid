@@ -111,9 +111,10 @@ struct _R {
     }
   }
 
-  /// This `_R.segue` struct is generated, and contains static references to 1 view controllers.
+  /// This `_R.segue` struct is generated, and contains static references to 2 view controllers.
   struct segue {
     let mainScreenViewController = mainScreenViewController()
+    let settingsScreenViewController = settingsScreenViewController()
 
     /// This struct is generated for `MainScreenViewController`, and contains static references to 1 segues.
     struct mainScreenViewController {
@@ -121,22 +122,36 @@ struct _R {
       /// Segue identifier `goToSettings`.
       var goToSettings: RswiftResources.SegueIdentifier<UIKit.UIStoryboardSegue, MainScreenViewController, SettingsScreenViewController> { .init(identifier: "goToSettings") }
     }
+
+    /// This struct is generated for `SettingsScreenViewController`, and contains static references to 1 segues.
+    struct settingsScreenViewController {
+
+      /// Segue identifier `goToMusicSettings`.
+      var goToMusicSettings: RswiftResources.SegueIdentifier<UIKit.UIStoryboardSegue, SettingsScreenViewController, MusicScreenViewController> { .init(identifier: "goToMusicSettings") }
+    }
   }
 
-  /// This `_R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `_R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
     let bundle: Foundation.Bundle
+
+    /// Nib `MusicSettingsCollectionViewCell`.
+    var musicSettingsCollectionViewCell: RswiftResources.NibReferenceReuseIdentifier<MusicSettingsCollectionViewCell, MusicSettingsCollectionViewCell> { .init(name: "MusicSettingsCollectionViewCell", bundle: bundle, identifier: "MusicSettingsCollectionViewCell") }
 
     /// Nib `SettingsCollectionViewCell`.
     var settingsCollectionViewCell: RswiftResources.NibReferenceReuseIdentifier<SettingsCollectionViewCell, SettingsCollectionViewCell> { .init(name: "SettingsCollectionViewCell", bundle: bundle, identifier: "SettingsCollectionViewCell") }
 
     func validate() throws {
+      if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'circle' is used in nib 'MusicSettingsCollectionViewCell', but couldn't be loaded.") } }
       if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "arrow.right.circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'arrow.right.circle' is used in nib 'SettingsCollectionViewCell', but couldn't be loaded.") } }
     }
   }
 
-  /// This `_R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `_R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
   struct reuseIdentifier {
+
+    /// Reuse identifier `MusicSettingsCollectionViewCell`.
+    let musicSettingsCollectionViewCell: RswiftResources.ReuseIdentifier<MusicSettingsCollectionViewCell> = .init(identifier: "MusicSettingsCollectionViewCell")
 
     /// Reuse identifier `SettingsCollectionViewCell`.
     let settingsCollectionViewCell: RswiftResources.ReuseIdentifier<SettingsCollectionViewCell> = .init(identifier: "SettingsCollectionViewCell")

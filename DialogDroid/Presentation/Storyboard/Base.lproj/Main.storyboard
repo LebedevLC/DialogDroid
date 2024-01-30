@@ -164,11 +164,80 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="YFa-8X-0EB" id="F3F-TK-3Oj"/>
+                        <segue destination="PgD-x4-Bwp" kind="show" identifier="goToMusicSettings" id="rOy-be-NwC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OsL-wM-vRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1734" y="-627"/>
+        </scene>
+        <!--MusicSettings-->
+        <scene sceneID="2kN-Hn-Xau">
+            <objects>
+                <viewController id="PgD-x4-Bwp" customClass="MusicScreenViewController" customModule="DialogDroid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nvx-wE-G2F">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wU5-jd-5zl">
+                                <rect key="frame" x="16" y="174" width="361" height="644"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J4W-DI-YNE">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable background sound large large large text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="7Hm-8c-sb4">
+                                <rect key="frame" x="16" y="130.66666666666666" width="298" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="0TE-Z3-SKL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mke-Iu-2H0">
+                                <rect key="frame" x="330" y="127" width="49" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="D4k-k6-SO5"/>
+                                    <constraint firstAttribute="width" constant="47" id="dOK-Kr-L5b"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="switchValueDidChange:" destination="PgD-x4-Bwp" eventType="valueChanged" id="oOp-p9-ZOa"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kge-YD-fuc"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="7Hm-8c-sb4" firstAttribute="centerY" secondItem="Mke-Iu-2H0" secondAttribute="centerY" id="4Ak-53-Ije"/>
+                            <constraint firstItem="wU5-jd-5zl" firstAttribute="top" secondItem="Mke-Iu-2H0" secondAttribute="bottom" constant="16" id="Nc3-gf-seo"/>
+                            <constraint firstItem="kge-YD-fuc" firstAttribute="bottom" secondItem="wU5-jd-5zl" secondAttribute="bottom" id="SnD-Da-BXs"/>
+                            <constraint firstItem="Mke-Iu-2H0" firstAttribute="leading" secondItem="7Hm-8c-sb4" secondAttribute="trailing" constant="16" id="T2e-hD-iAB"/>
+                            <constraint firstItem="kge-YD-fuc" firstAttribute="trailing" secondItem="wU5-jd-5zl" secondAttribute="trailing" constant="16" id="e87-ca-tCS"/>
+                            <constraint firstItem="kge-YD-fuc" firstAttribute="trailing" secondItem="Mke-Iu-2H0" secondAttribute="trailing" constant="16" id="gUr-Y2-610"/>
+                            <constraint firstItem="Mke-Iu-2H0" firstAttribute="top" secondItem="kge-YD-fuc" secondAttribute="top" constant="24" id="mp2-YM-R54"/>
+                            <constraint firstItem="wU5-jd-5zl" firstAttribute="leading" secondItem="kge-YD-fuc" secondAttribute="leading" constant="16" id="sWS-bs-aDf"/>
+                            <constraint firstItem="7Hm-8c-sb4" firstAttribute="leading" secondItem="kge-YD-fuc" secondAttribute="leading" constant="16" id="yQh-af-xK5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="MusicSettings" id="IGa-aX-JUP">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="oo6-Sh-q0X">
+                            <color key="tintColor" systemColor="labelColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="wU5-jd-5zl" id="5yU-sQ-rD8"/>
+                        <outlet property="enableMusicLabel" destination="7Hm-8c-sb4" id="Xlp-hT-ZC7"/>
+                        <outlet property="enableMusicSwitch" destination="Mke-Iu-2H0" id="Lxj-lb-bxa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zrh-CN-udW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2750" y="-622"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jsI-nn-NvL">
