@@ -18,6 +18,8 @@ final class MusicScreenViewController: UIViewController {
     private var selectedIndex: IndexPath?
     private let musicModel: [MusicCollection] = MusicCollection.allCases
     
+    private let servicesProvider: ServicesProvider = DefaultServicesProvider.shared
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -30,10 +32,25 @@ final class MusicScreenViewController: UIViewController {
         configureNavigationBar()
     }
     
+    override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        enableMusicSwitch.setOn(servicesProvider.settingsStorage.isMusicOn, animated: animated)
+        collectionView.selectItem(
+            at: IndexPath(item: servicesProvider.settingsStorage.selectedMusicIndex, section: 0),
+            animated: animated,
+            scrollPosition: .centeredVertically
+        )
+    }
+    
     // MARK: - Actions
+    
+    @IBAction private func backButtonDidTap(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
+    }
     
     @IBAction private func switchValueDidChange(_ sender: UISwitch) {
         print(#function)
+        servicesProvider.settingsStorage.isMusicOn = sender.isOn
     }
     
     // MARK: - Private Methods
@@ -93,6 +110,7 @@ extension MusicScreenViewController: UICollectionViewDelegate {
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredVertically)
         selectedIndex = indexPath
         selectCurrentMusic(musicModel[indexPath.item])
+        servicesProvider.settingsStorage.selectedMusicIndex = indexPath.item
     }
 }
 

@@ -227,6 +227,9 @@
                     <navigationItem key="navigationItem" title="MusicSettings" id="IGa-aX-JUP">
                         <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="oo6-Sh-q0X">
                             <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="backButtonDidTap:" destination="PgD-x4-Bwp" id="nff-LC-nOg"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

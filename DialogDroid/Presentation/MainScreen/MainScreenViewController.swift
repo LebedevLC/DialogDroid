@@ -14,11 +14,13 @@ class MainScreenViewController: UIViewController {
     @IBOutlet private weak var animatedViewContainer: UIView!
     @IBOutlet private weak var centerLabel: UILabel!
     
+    private let servicesProvider: ServicesProvider = DefaultServicesProvider.shared
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("test")
+        checkIfLaunchBefore()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +53,12 @@ class MainScreenViewController: UIViewController {
     private func configureNavigationBar() {
         #warning("Localization")
         navigationItem.title = "Main Screen"
+    }
+    
+    private func checkIfLaunchBefore() {
+        if !servicesProvider.applicationStorage.isLaunchedBefore {
+            servicesProvider.applicationStorage.isLaunchedBefore = true
+        }
     }
 }
 
