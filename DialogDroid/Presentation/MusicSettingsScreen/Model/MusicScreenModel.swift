@@ -16,23 +16,22 @@ enum MusicCollection: CaseIterable {
     case music6
     case music7
     
-    #warning("Localization")
     var title: String {
         switch self {
         case .music1:
-            "Soft music"
+            R.string.localizable.musicCollectionItemSoft()
         case .music2:
-            "Rock music"
+            R.string.localizable.musicCollectionItemRock()
         case .music3:
-            "Electro music"
+            R.string.localizable.musicCollectionItemElectro()
         case .music4:
-            "Techno music"
+            R.string.localizable.musicCollectionItemTechno()
         case .music5:
-            "Jazz music"
+            R.string.localizable.musicCollectionItemJazz()
         case .music6:
-            "Pop music"
+            R.string.localizable.musicCollectionItemPop()
         case .music7:
-            "Light beat music"
+            R.string.localizable.musicCollectionItemLight()
         }
     }
     

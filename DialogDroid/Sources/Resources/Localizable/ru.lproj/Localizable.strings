@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  DialogDroid
+
+  Created by Сергей Чумовских  on 05.02.2024.
+  
+*/
+
+"mainScreenTitle" = "Главный экран";
+"mainScreenCenterLabel" = "Начните общение с ИИ";
+
+"settingsScreenTitle" = "Настройки";
+
+"settingsMusicItem" = "Музыка";
+"settingsDeleteChatItem" = "Удалить историю чата";
+"settingsAboutItem" = "О приложении";
+
+"musicSettingsScreenTitle" = "Настройки музыки";
+"musicSettingsScreenSwitchLabel" = "Включить фоновую музыку";
+
+"musicCollectionItemSoft" = "Мягкая музыка";
+"musicCollectionItemRock" = "Рок музыка";
+"musicCollectionItemElectro" = "Электро музыка";
+"musicCollectionItemTechno" = "Техно музыка";
+"musicCollectionItemJazz" = "Джазз музыка";
+"musicCollectionItemPop" = "Поп музыка";
+"musicCollectionItemLight" = "Легкие битовые";

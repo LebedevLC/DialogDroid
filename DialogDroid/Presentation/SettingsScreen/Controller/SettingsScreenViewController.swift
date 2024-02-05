@@ -36,8 +36,7 @@ final class SettingsScreenViewController: UIViewController {
     // MARK: - Private Methods
     
     private func configureNavigationBar() {
-        #warning("Localization")
-        navigationItem.title = "Settings"
+        navigationItem.title = R.string.localizable.settingsScreenTitle()
     }
     
     private func configureCollection() {

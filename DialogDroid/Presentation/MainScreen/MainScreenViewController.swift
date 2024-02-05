@@ -21,6 +21,7 @@ class MainScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkIfLaunchBefore()
+        setupLabels()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,9 +51,12 @@ class MainScreenViewController: UIViewController {
     
     // MARK: - Private Methods
     
+    private func setupLabels() {
+        centerLabel.text = R.string.localizable.mainScreenCenterLabel()
+    }
+    
     private func configureNavigationBar() {
-        #warning("Localization")
-        navigationItem.title = "Main Screen"
+        navigationItem.title = R.string.localizable.mainScreenTitle()
     }
     
     private func checkIfLaunchBefore() {

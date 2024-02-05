@@ -25,6 +25,7 @@ final class MusicScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollection()
+        setupLabels()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,6 +56,10 @@ final class MusicScreenViewController: UIViewController {
     
     // MARK: - Private Methods
     
+    private func setupLabels() {
+        enableMusicLabel.text = R.string.localizable.musicSettingsScreenSwitchLabel()
+    }
+    
     private func selectCurrentMusic(_ music: MusicCollection) {
         print(#function)
     }
@@ -69,8 +74,7 @@ final class MusicScreenViewController: UIViewController {
     }
     
     private func configureNavigationBar() {
-        #warning("Localization")
-        navigationItem.title = "Music settings"
+        navigationItem.title = R.string.localizable.musicSettingsScreenTitle()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)

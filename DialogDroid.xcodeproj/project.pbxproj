@@ -28,6 +28,7 @@
 		465EC52C2B6AA0DC00451537 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EC52B2B6AA0DC00451537 /* Bundle+Extensions.swift */; };
 		465EC52E2B6AA1D400451537 /* SettingsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EC52D2B6AA1D400451537 /* SettingsProvider.swift */; };
 		4666BE482B62D74B00D40241 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666BE472B62D74B00D40241 /* CornerView.swift */; };
+		46E8FA222B71473200BCA83E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46E8FA242B71473200BCA83E /* Localizable.strings */; };
 		AB8ECD8F206C99F039CBE635 /* Pods_DialogDroid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA909A4C53EC84651296C718 /* Pods_DialogDroid.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,8 @@
 		465EC52B2B6AA0DC00451537 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		465EC52D2B6AA1D400451537 /* SettingsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProvider.swift; sourceTree = "<group>"; };
 		4666BE472B62D74B00D40241 /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
+		46E8FA232B71473200BCA83E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		46E8FA252B71474400BCA83E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BA909A4C53EC84651296C718 /* Pods_DialogDroid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DialogDroid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,6 +118,7 @@
 		462B74DF2B62C4E800319B06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				46E8FA1F2B71470700BCA83E /* Localizable */,
 				462B74D32B62C4B500319B06 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -311,6 +315,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		46E8FA1F2B71470700BCA83E /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				46E8FA242B71473200BCA83E /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		8F960CC4BF9591F8DB7D5206 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +386,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 462B74BE2B62C4B400319B06;
 			productRefGroup = 462B74C82B62C4B400319B06 /* Products */;
@@ -391,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				462B74D72B62C4B500319B06 /* LaunchScreen.storyboard in Resources */,
+				46E8FA222B71473200BCA83E /* Localizable.strings in Resources */,
 				462B74D42B62C4B500319B06 /* Assets.xcassets in Resources */,
 				462B74D22B62C4B400319B06 /* Main.storyboard in Resources */,
 				465114FC2B641C450047F357 /* SettingsCollectionViewCell.xib in Resources */,
@@ -524,6 +538,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		46E8FA242B71473200BCA83E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46E8FA232B71473200BCA83E /* en */,
+				46E8FA252B71474400BCA83E /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -532,6 +555,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -595,6 +619,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

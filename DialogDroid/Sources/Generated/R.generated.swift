@@ -16,12 +16,22 @@ struct _R {
   let segue = segue()
   let reuseIdentifier = reuseIdentifier()
 
+  var string: string { .init(bundle: bundle, preferredLanguages: nil, locale: nil) }
   var color: color { .init(bundle: bundle) }
   var image: image { .init(bundle: bundle) }
   var info: info { .init(bundle: bundle) }
   var nib: nib { .init(bundle: bundle) }
   var storyboard: storyboard { .init(bundle: bundle) }
 
+  func string(bundle: Foundation.Bundle) -> string {
+    .init(bundle: bundle, preferredLanguages: nil, locale: nil)
+  }
+  func string(locale: Foundation.Locale) -> string {
+    .init(bundle: bundle, preferredLanguages: nil, locale: locale)
+  }
+  func string(preferredLanguages: [String], locale: Locale? = nil) -> string {
+    .init(bundle: bundle, preferredLanguages: preferredLanguages, locale: locale)
+  }
   func color(bundle: Foundation.Bundle) -> color {
     .init(bundle: bundle)
   }
@@ -44,6 +54,129 @@ struct _R {
 
   struct project {
     let developmentRegion = "en"
+  }
+
+  /// This `_R.string` struct is generated, and contains static references to 1 localization tables.
+  struct string {
+    let bundle: Foundation.Bundle
+    let preferredLanguages: [String]?
+    let locale: Locale?
+    var localizable: localizable { .init(source: .init(bundle: bundle, tableName: "Localizable", preferredLanguages: preferredLanguages, locale: locale)) }
+
+    func localizable(preferredLanguages: [String]) -> localizable {
+      .init(source: .init(bundle: bundle, tableName: "Localizable", preferredLanguages: preferredLanguages, locale: locale))
+    }
+
+
+    /// This `_R.string.localizable` struct is generated, and contains static references to 15 localization keys.
+    struct localizable {
+      let source: RswiftResources.StringResource.Source
+
+      /// en translation: Start communicating with the AI
+      ///
+      /// Key: mainScreenCenterLabel
+      ///
+      /// Locales: en, ru
+      var mainScreenCenterLabel: RswiftResources.StringResource { .init(key: "mainScreenCenterLabel", tableName: "Localizable", source: source, developmentValue: "Start communicating with the AI", comment: nil) }
+
+      /// en translation: Main Screen
+      ///
+      /// Key: mainScreenTitle
+      ///
+      /// Locales: en, ru
+      var mainScreenTitle: RswiftResources.StringResource { .init(key: "mainScreenTitle", tableName: "Localizable", source: source, developmentValue: "Main Screen", comment: nil) }
+
+      /// en translation: Electro music
+      ///
+      /// Key: musicCollectionItemElectro
+      ///
+      /// Locales: en, ru
+      var musicCollectionItemElectro: RswiftResources.StringResource { .init(key: "musicCollectionItemElectro", tableName: "Localizable", source: source, developmentValue: "Electro music", comment: nil) }
+
+      /// en translation: Jazz music
+      ///
+      /// Key: musicCollectionItemJazz
+      ///
+      /// Locales: en, ru
+      var musicCollectionItemJazz: RswiftResources.StringResource { .init(key: "musicCollectionItemJazz", tableName: "Localizable", source: source, developmentValue: "Jazz music", comment: nil) }
+
+      /// en translation: Light beat music
+      ///
+      /// Key: musicCollectionItemLight
+      ///
+      /// Locales: en, ru
+      var musicCollectionItemLight: RswiftResources.StringResource { .init(key: "musicCollectionItemLight", tableName: "Localizable", source: source, developmentValue: "Light beat music", comment: nil) }
+
+      /// en translation: Pop music
+      ///
+      /// Key: musicCollectionItemPop
+      ///
+      /// Locales: en, ru
+      var musicCollectionItemPop: RswiftResources.StringResource { .init(key: "musicCollectionItemPop", tableName: "Localizable", source: source, developmentValue: "Pop music", comment: nil) }
+
+      /// en translation: Rock music
+      ///
+      /// Key: musicCollectionItemRock
+      ///
+      /// Locales: en, ru
+      var musicCollectionItemRock: RswiftResources.StringResource { .init(key: "musicCollectionItemRock", tableName: "Localizable", source: source, developmentValue: "Rock music", comment: nil) }
+
+      /// en translation: Soft music
+      ///
+      /// Key: musicCollectionItemSoft
+      ///
+      /// Locales: en, ru
+      var musicCollectionItemSoft: RswiftResources.StringResource { .init(key: "musicCollectionItemSoft", tableName: "Localizable", source: source, developmentValue: "Soft music", comment: nil) }
+
+      /// en translation: Techno music
+      ///
+      /// Key: musicCollectionItemTechno
+      ///
+      /// Locales: en, ru
+      var musicCollectionItemTechno: RswiftResources.StringResource { .init(key: "musicCollectionItemTechno", tableName: "Localizable", source: source, developmentValue: "Techno music", comment: nil) }
+
+      /// en translation: Play background music
+      ///
+      /// Key: musicSettingsScreenSwitchLabel
+      ///
+      /// Locales: en, ru
+      var musicSettingsScreenSwitchLabel: RswiftResources.StringResource { .init(key: "musicSettingsScreenSwitchLabel", tableName: "Localizable", source: source, developmentValue: "Play background music", comment: nil) }
+
+      /// en translation: Music settings
+      ///
+      /// Key: musicSettingsScreenTitle
+      ///
+      /// Locales: en, ru
+      var musicSettingsScreenTitle: RswiftResources.StringResource { .init(key: "musicSettingsScreenTitle", tableName: "Localizable", source: source, developmentValue: "Music settings", comment: nil) }
+
+      /// en translation: About application
+      ///
+      /// Key: settingsAboutItem
+      ///
+      /// Locales: en, ru
+      var settingsAboutItem: RswiftResources.StringResource { .init(key: "settingsAboutItem", tableName: "Localizable", source: source, developmentValue: "About application", comment: nil) }
+
+      /// en translation: Delete all chat history
+      ///
+      /// Key: settingsDeleteChatItem
+      ///
+      /// Locales: en, ru
+      var settingsDeleteChatItem: RswiftResources.StringResource { .init(key: "settingsDeleteChatItem", tableName: "Localizable", source: source, developmentValue: "Delete all chat history", comment: nil) }
+
+      /// en translation: Music
+      ///
+      /// Key: settingsMusicItem
+      ///
+      /// Locales: en, ru
+      var settingsMusicItem: RswiftResources.StringResource { .init(key: "settingsMusicItem", tableName: "Localizable", source: source, developmentValue: "Music", comment: nil) }
+
+      /// en translation: Settings
+      ///
+      /// Key: settingsScreenTitle
+      ///
+      /// Locales: en, ru
+      var settingsScreenTitle: RswiftResources.StringResource { .init(key: "settingsScreenTitle", tableName: "Localizable", source: source, developmentValue: "Settings", comment: nil) }
+    }
   }
 
   /// This `_R.color` struct is generated, and contains static references to 1 colors.
