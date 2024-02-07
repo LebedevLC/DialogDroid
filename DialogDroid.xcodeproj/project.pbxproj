@@ -28,6 +28,12 @@
 		465EC52C2B6AA0DC00451537 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EC52B2B6AA0DC00451537 /* Bundle+Extensions.swift */; };
 		465EC52E2B6AA1D400451537 /* SettingsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EC52D2B6AA1D400451537 /* SettingsProvider.swift */; };
 		4666BE482B62D74B00D40241 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666BE472B62D74B00D40241 /* CornerView.swift */; };
+		466CCE712B73D46A00551745 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CCE702B73D46A00551745 /* CoreDataService.swift */; };
+		466CCE732B73D74300551745 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CCE722B73D74200551745 /* CoreDataManager.swift */; };
+		466CCE762B73DAF200551745 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 466CCE742B73DAF200551745 /* DataModel.xcdatamodeld */; };
+		466CCE7E2B73DDD400551745 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CCE7D2B73DDD400551745 /* MessageModel.swift */; };
+		466CCE822B73DEDF00551745 /* CoreDataChatMessage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CCE802B73DEDF00551745 /* CoreDataChatMessage+CoreDataClass.swift */; };
+		466CCE832B73DEDF00551745 /* CoreDataChatMessage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CCE812B73DEDF00551745 /* CoreDataChatMessage+CoreDataProperties.swift */; };
 		46E8FA222B71473200BCA83E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46E8FA242B71473200BCA83E /* Localizable.strings */; };
 		AB8ECD8F206C99F039CBE635 /* Pods_DialogDroid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA909A4C53EC84651296C718 /* Pods_DialogDroid.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +64,12 @@
 		465EC52B2B6AA0DC00451537 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		465EC52D2B6AA1D400451537 /* SettingsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProvider.swift; sourceTree = "<group>"; };
 		4666BE472B62D74B00D40241 /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
+		466CCE702B73D46A00551745 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		466CCE722B73D74200551745 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		466CCE752B73DAF200551745 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		466CCE7D2B73DDD400551745 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		466CCE802B73DEDF00551745 /* CoreDataChatMessage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataChatMessage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		466CCE812B73DEDF00551745 /* CoreDataChatMessage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataChatMessage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		46E8FA232B71473200BCA83E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		46E8FA252B71474400BCA83E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BA909A4C53EC84651296C718 /* Pods_DialogDroid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DialogDroid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +164,7 @@
 		462B74E72B62C76600319B06 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				466CCE7B2B73DDB600551745 /* ChatScreen */,
 				465EC5152B6944AF00451537 /* MusicSettingsScreen */,
 				465114F52B641BB10047F357 /* SettingsScreen */,
 				4666BE452B62D72E00D40241 /* CustomElements */,
@@ -284,6 +297,7 @@
 		465EC5232B6A9CDD00451537 /* Persistency */ = {
 			isa = PBXGroup;
 			children = (
+				466CCE6C2B73D42A00551745 /* CoreData */,
 				465EC5242B6A9D0400451537 /* UserDefaultStorage.swift */,
 				465EC5262B6A9D1A00451537 /* ApplicationSettings.swift */,
 				465EC5282B6A9FAA00451537 /* ApplicationStorage.swift */,
@@ -313,6 +327,42 @@
 				4666BE472B62D74B00D40241 /* CornerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		466CCE6C2B73D42A00551745 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				466CCE7F2B73DEC600551745 /* Model */,
+				466CCE702B73D46A00551745 /* CoreDataService.swift */,
+				466CCE722B73D74200551745 /* CoreDataManager.swift */,
+				466CCE742B73DAF200551745 /* DataModel.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		466CCE7B2B73DDB600551745 /* ChatScreen */ = {
+			isa = PBXGroup;
+			children = (
+				466CCE7C2B73DDC000551745 /* Model */,
+			);
+			path = ChatScreen;
+			sourceTree = "<group>";
+		};
+		466CCE7C2B73DDC000551745 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				466CCE7D2B73DDD400551745 /* MessageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		466CCE7F2B73DEC600551745 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				466CCE802B73DEDF00551745 /* CoreDataChatMessage+CoreDataClass.swift */,
+				466CCE812B73DEDF00551745 /* CoreDataChatMessage+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		46E8FA1F2B71470700BCA83E /* Localizable */ = {
@@ -500,20 +550,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				466CCE712B73D46A00551745 /* CoreDataService.swift in Sources */,
 				465EC5272B6A9D1A00451537 /* ApplicationSettings.swift in Sources */,
+				466CCE832B73DEDF00551745 /* CoreDataChatMessage+CoreDataProperties.swift in Sources */,
 				465EC5252B6A9D0400451537 /* UserDefaultStorage.swift in Sources */,
 				4666BE482B62D74B00D40241 /* CornerView.swift in Sources */,
 				462B74CF2B62C4B400319B06 /* MainScreenViewController.swift in Sources */,
 				462B74CB2B62C4B400319B06 /* AppDelegate.swift in Sources */,
+				466CCE732B73D74300551745 /* CoreDataManager.swift in Sources */,
 				462B74CD2B62C4B400319B06 /* SceneDelegate.swift in Sources */,
 				465EC52C2B6AA0DC00451537 /* Bundle+Extensions.swift in Sources */,
+				466CCE822B73DEDF00551745 /* CoreDataChatMessage+CoreDataClass.swift in Sources */,
 				465EC5202B69547100451537 /* MusicScreenModel.swift in Sources */,
 				465114FB2B641C450047F357 /* SettingsCollectionViewCell.swift in Sources */,
 				465EC5292B6A9FAA00451537 /* ApplicationStorage.swift in Sources */,
 				465EC51D2B6947DA00451537 /* MusicSettingsCollectionViewCell.swift in Sources */,
 				462B74E32B62C5FA00319B06 /* R.generated.swift in Sources */,
+				466CCE762B73DAF200551745 /* DataModel.xcdatamodeld in Sources */,
 				465115012B641E1D0047F357 /* SettingsScreenModel.swift in Sources */,
 				465EC52E2B6AA1D400451537 /* SettingsProvider.swift in Sources */,
+				466CCE7E2B73DDD400551745 /* MessageModel.swift in Sources */,
 				465EC51A2B6944DB00451537 /* MusicScreenViewController.swift in Sources */,
 				465114F72B641BC50047F357 /* SettingsScreenViewController.swift in Sources */,
 			);
@@ -763,6 +819,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		466CCE742B73DAF200551745 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				466CCE752B73DAF200551745 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 466CCE752B73DAF200551745 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 462B74BF2B62C4B400319B06 /* Project object */;
 }

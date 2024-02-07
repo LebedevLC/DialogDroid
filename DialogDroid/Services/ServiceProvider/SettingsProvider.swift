@@ -12,6 +12,8 @@ protocol ServicesProvider {
     var applicationStorage: ApplicationStorage { get }
     /// Хранилище настроек
     var settingsStorage: ApplicationSettings { get }
+    /// Менеджер работы с БД
+    var coreDataManager: CoreDataManager { get }
 }
 
 final class DefaultServicesProvider: ServicesProvider {
@@ -20,17 +22,21 @@ final class DefaultServicesProvider: ServicesProvider {
     
     var applicationStorage: ApplicationStorage
     var settingsStorage: ApplicationSettings
+    var coreDataManager: CoreDataManager
     
     static let shared = DefaultServicesProvider()
     
     // MARK: - Private Properties
     
     private let userDefaultStorage = UserDefaultStorage.shared
+    private let coreDataService: CoreDataService
     
     // MARK: - Initialization
     
     private init() {
-        self.applicationStorage = userDefaultStorage
-        self.settingsStorage = userDefaultStorage
+        coreDataService = CoreDataService(modelName: "DataModel")
+        coreDataManager = DefaultCoreDataManager(database: coreDataService)
+        applicationStorage = userDefaultStorage
+        settingsStorage = userDefaultStorage
     }
 }
