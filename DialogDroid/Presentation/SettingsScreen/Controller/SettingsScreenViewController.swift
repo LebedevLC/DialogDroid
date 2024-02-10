@@ -14,6 +14,7 @@ final class SettingsScreenViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     
     private let screenModel = SettingsScreenCollectionModel.allCases
+    private let servicesProvider: ServicesProvider = DefaultServicesProvider.shared
     
     // MARK: - Life Cycle
     
@@ -46,6 +47,29 @@ final class SettingsScreenViewController: UIViewController {
             UINib(nibName: "SettingsCollectionViewCell", bundle: nil),
             forCellWithReuseIdentifier: "SettingsCollectionViewCell"
         )
+    }
+    
+    private func presentDeleteAllMessagesAlert(deleteHandler: @escaping () -> Void ) {
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in deleteHandler() }
+        let actions = [cancelAction, deleteAction]
+        let alertController = UIAlertController(
+            title: "Delete all messages?",
+            message: "Do you really want to delete all messages? This action cannot be undone!",
+            preferredStyle: .alert
+        )
+        actions.forEach({ alertController.addAction($0) })
+        present(alertController, animated: true)
+    }
+    
+    private func presentAboutAlert() {
+        let alertController = UIAlertController(
+            title: "About the application",
+            message: "DialogDroid\nCreated by Sergey Chumovskikh in 2024",
+            preferredStyle: .alert
+        )
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alertController, animated: true)
     }
 }
 
@@ -80,9 +104,17 @@ extension SettingsScreenViewController: UICollectionViewDelegate {
         case .music:
             performSegue(withIdentifier: "goToMusicSettings", sender: nil)
         case .deleteChatHistory:
-            break
+            presentDeleteAllMessagesAlert { [weak self] in
+                do {
+                    try self?.servicesProvider.coreDataManager.deleteAllMessages()
+                    let result = try self?.servicesProvider.coreDataManager.getAllChatMessages()
+                    print(result)
+                } catch {
+                    print(error)
+                }
+            }
         case .about:
-            break
+            presentAboutAlert()
         }
     }
 }

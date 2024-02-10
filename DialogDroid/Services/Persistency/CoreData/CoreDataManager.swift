@@ -10,6 +10,7 @@ import CoreData
 protocol CoreDataManager {
     func getAllChatMessages() throws -> [MessageModel]
     func saveChatMessage(_ model: MessageModel) throws -> Bool
+    func deleteAllMessages() throws
 }
 
 final class DefaultCoreDataManager: CoreDataManager {
@@ -37,5 +38,9 @@ final class DefaultCoreDataManager: CoreDataManager {
         let coreDataChatMessage = try database.createObject(from: CoreDataChatMessage.self)
         coreDataChatMessage.populate(from: model)
         return try database.saveChanges()
+    }
+    
+    func deleteAllMessages() throws {
+        try database.deleteAllObjects(ofType: CoreDataChatMessage.self)
     }
 }

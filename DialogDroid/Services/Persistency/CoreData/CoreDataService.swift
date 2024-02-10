@@ -12,7 +12,6 @@ enum CoreDataServiceError: Error {
     case failCastToType(String)
 }
 
-
 final class CoreDataService {
     
     // MARK: - Private Properties
@@ -56,6 +55,13 @@ final class CoreDataService {
     func deleteObject(_ object: NSManagedObject) throws -> Bool {
         context.delete(object)
         return try saveChanges()
+    }
+    
+    func deleteAllObjects<T: NSManagedObject>(ofType entity: T.Type) throws {
+        let request = entity.fetchRequest()
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
+        deleteRequest.resultType = .resultTypeObjectIDs
+        try persistentStoreContainer.persistentStoreCoordinator.execute(deleteRequest, with: context)
     }
     
     func fetchObjects<T: NSManagedObject>(

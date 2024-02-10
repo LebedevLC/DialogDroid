@@ -36,7 +36,9 @@ class MainScreenViewController: UIViewController {
     }
     
     @IBAction private func shareButtonDidTap(_ sender: Any) {
-        print(#function)
+        guard let url = URL(string: "https://apple.com") else { return }
+        let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        present(activityVC, animated: true)
     }
     
     @IBAction private func rolePlayChatButtonDidTap(_ sender: Any) {
