@@ -50,8 +50,7 @@ final class MusicScreenViewController: UIViewController {
     }
     
     @IBAction private func switchValueDidChange(_ sender: UISwitch) {
-        print(#function)
-        servicesProvider.settingsStorage.isMusicOn = sender.isOn
+        servicesProvider.musicPlayerManager.changePlaying(isMusicOn: sender.isOn)
     }
     
     // MARK: - Private Methods
@@ -108,13 +107,13 @@ extension MusicScreenViewController: UICollectionViewDataSource {
 
 extension MusicScreenViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let selectedIndex {
+        if selectedIndex != nil {
             collectionView.deselectItem(at: indexPath, animated: false)
         }
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredVertically)
         selectedIndex = indexPath
         selectCurrentMusic(musicModel[indexPath.item])
-        servicesProvider.settingsStorage.selectedMusicIndex = indexPath.item
+        servicesProvider.musicPlayerManager.changeMusic(to: musicModel[indexPath.item])
     }
 }
 

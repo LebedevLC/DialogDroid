@@ -14,6 +14,8 @@ protocol ServicesProvider {
     var settingsStorage: ApplicationSettings { get }
     /// Менеджер работы с БД
     var coreDataManager: CoreDataManager { get }
+    
+    var musicPlayerManager: MusicPlayerManager { get }
 }
 
 final class DefaultServicesProvider: ServicesProvider {
@@ -23,6 +25,7 @@ final class DefaultServicesProvider: ServicesProvider {
     var applicationStorage: ApplicationStorage
     var settingsStorage: ApplicationSettings
     var coreDataManager: CoreDataManager
+    var musicPlayerManager: MusicPlayerManager
     
     static let shared = DefaultServicesProvider()
     
@@ -38,5 +41,9 @@ final class DefaultServicesProvider: ServicesProvider {
         coreDataManager = DefaultCoreDataManager(database: coreDataService)
         applicationStorage = userDefaultStorage
         settingsStorage = userDefaultStorage
+        musicPlayerManager = DefaultMusicPlayerManager(
+            settingsStorage: userDefaultStorage,
+            musicPlayer: DefaultMusicPlayer()
+        )
     }
 }

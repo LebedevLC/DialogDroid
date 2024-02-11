@@ -20,6 +20,7 @@ struct _R {
   var color: color { .init(bundle: bundle) }
   var image: image { .init(bundle: bundle) }
   var info: info { .init(bundle: bundle) }
+  var file: file { .init(bundle: bundle) }
   var nib: nib { .init(bundle: bundle) }
   var storyboard: storyboard { .init(bundle: bundle) }
 
@@ -39,6 +40,9 @@ struct _R {
     .init(bundle: bundle)
   }
   func info(bundle: Foundation.Bundle) -> info {
+    .init(bundle: bundle)
+  }
+  func file(bundle: Foundation.Bundle) -> file {
     .init(bundle: bundle)
   }
   func nib(bundle: Foundation.Bundle) -> nib {
@@ -242,6 +246,32 @@ struct _R {
         }
       }
     }
+  }
+
+  /// This `_R.file` struct is generated, and contains static references to 7 resource files.
+  struct file {
+    let bundle: Foundation.Bundle
+
+    /// Resource file `music1.mp3`.
+    var music1Mp3: RswiftResources.FileResource { .init(name: "music1", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `music2.mp3`.
+    var music2Mp3: RswiftResources.FileResource { .init(name: "music2", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `music3.mp3`.
+    var music3Mp3: RswiftResources.FileResource { .init(name: "music3", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `music4.mp3`.
+    var music4Mp3: RswiftResources.FileResource { .init(name: "music4", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `music5.mp3`.
+    var music5Mp3: RswiftResources.FileResource { .init(name: "music5", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `music6.mp3`.
+    var music6Mp3: RswiftResources.FileResource { .init(name: "music6", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `music7.mp3`.
+    var music7Mp3: RswiftResources.FileResource { .init(name: "music7", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
   }
 
   /// This `_R.segue` struct is generated, and contains static references to 2 view controllers.

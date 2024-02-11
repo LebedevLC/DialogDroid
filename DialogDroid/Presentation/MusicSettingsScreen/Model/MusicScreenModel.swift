@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum MusicCollection: CaseIterable {
+enum MusicCollection: Int, CaseIterable {
     case music1
     case music2
     case music3
@@ -37,8 +37,20 @@ enum MusicCollection: CaseIterable {
     
     var fileUrl: URL? {
         switch self {
-        default:
-            return nil
+        case .music1:
+            R.file.music1Mp3.url()
+        case .music2:
+            R.file.music2Mp3.url()
+        case .music3:
+            R.file.music3Mp3.url()
+        case .music4:
+            R.file.music4Mp3.url()
+        case .music5:
+            R.file.music5Mp3.url()
+        case .music6:
+            R.file.music6Mp3.url()
+        case .music7:
+            R.file.music7Mp3.url()
         }
     }
 }
