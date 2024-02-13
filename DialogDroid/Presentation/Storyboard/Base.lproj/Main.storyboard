@@ -119,11 +119,61 @@
                         <outlet property="animatedViewContainer" destination="itD-yF-TVW" id="Yxz-mK-1Ea"/>
                         <outlet property="centerLabel" destination="xqQ-K1-Aee" id="SfZ-i5-z8K"/>
                         <segue destination="2KU-VY-I1T" kind="show" identifier="goToSettings" id="dFu-Pd-RXe"/>
+                        <segue destination="oC0-qU-7ho" kind="show" identifier="goToPlainChat" id="oBw-Xn-7ME"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1066.4122137404579" y="4.9295774647887329"/>
+        </scene>
+        <!--ChatScreen-->
+        <scene sceneID="IFk-Ea-6yY">
+            <objects>
+                <viewController id="oC0-qU-7ho" customClass="ChatScreenViewController" customModule="DialogDroid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Efc-cE-Uns">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PH9-ez-3st">
+                                <rect key="frame" x="0.0" y="717" width="393" height="135"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="omq-lE-9Bk"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tKX-M4-TnE">
+                                <rect key="frame" x="8" y="111" width="377" height="598"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MlF-na-3YV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PH9-ez-3st" firstAttribute="leading" secondItem="MlF-na-3YV" secondAttribute="leading" id="823-Qe-C03"/>
+                            <constraint firstItem="MlF-na-3YV" firstAttribute="trailing" secondItem="tKX-M4-TnE" secondAttribute="trailing" constant="8" id="INf-hL-qIn"/>
+                            <constraint firstAttribute="bottom" secondItem="PH9-ez-3st" secondAttribute="bottom" id="PT6-n8-4VC"/>
+                            <constraint firstItem="tKX-M4-TnE" firstAttribute="top" secondItem="MlF-na-3YV" secondAttribute="top" constant="8" id="TLB-Bk-Ykf"/>
+                            <constraint firstItem="tKX-M4-TnE" firstAttribute="leading" secondItem="MlF-na-3YV" secondAttribute="leading" constant="8" id="ajB-45-ffb"/>
+                            <constraint firstItem="PH9-ez-3st" firstAttribute="trailing" secondItem="MlF-na-3YV" secondAttribute="trailing" id="gwF-Q0-CtE"/>
+                            <constraint firstItem="PH9-ez-3st" firstAttribute="top" secondItem="tKX-M4-TnE" secondAttribute="bottom" constant="8" id="jpV-Lo-Vdm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ChatScreen" id="61z-JA-Wtc">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="tGf-ef-G68">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="backButtonDidTap:" destination="oC0-qU-7ho" id="CIM-5J-Y37"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="inputContainerView" destination="PH9-ez-3st" id="usb-SS-QqN"/>
+                        <outlet property="tableView" destination="tKX-M4-TnE" id="cB0-4H-8Nv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqt-IR-wMn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1968.7022900763359" y="208.45070422535213"/>
         </scene>
         <!--Title2-->
         <scene sceneID="8Ba-4o-6q3">
@@ -273,6 +323,9 @@
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

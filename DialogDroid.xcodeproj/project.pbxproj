@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4611C0892B7BC1D200F56C22 /* ChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4611C0882B7BC1D200F56C22 /* ChatScreenViewController.swift */; };
+		4611C08C2B7BC42000F56C22 /* ChatScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4611C08B2B7BC42000F56C22 /* ChatScreenTableViewCell.swift */; };
 		462B74CB2B62C4B400319B06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462B74CA2B62C4B400319B06 /* AppDelegate.swift */; };
 		462B74CD2B62C4B400319B06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462B74CC2B62C4B400319B06 /* SceneDelegate.swift */; };
 		462B74CF2B62C4B400319B06 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462B74CE2B62C4B400319B06 /* MainScreenViewController.swift */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		01F7D319AE533D1FD6324B3C /* Pods-DialogDroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DialogDroid.release.xcconfig"; path = "Target Support Files/Pods-DialogDroid/Pods-DialogDroid.release.xcconfig"; sourceTree = "<group>"; };
 		11AB45728D7E4E0040FDDBCD /* Pods-DialogDroid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DialogDroid.debug.xcconfig"; path = "Target Support Files/Pods-DialogDroid/Pods-DialogDroid.debug.xcconfig"; sourceTree = "<group>"; };
+		4611C0882B7BC1D200F56C22 /* ChatScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewController.swift; sourceTree = "<group>"; };
+		4611C08B2B7BC42000F56C22 /* ChatScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenTableViewCell.swift; sourceTree = "<group>"; };
 		462B74C72B62C4B400319B06 /* DialogDroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DialogDroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		462B74CA2B62C4B400319B06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		462B74CC2B62C4B400319B06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4611C0872B7BC1BD00F56C22 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4611C0882B7BC1D200F56C22 /* ChatScreenViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4611C08A2B7BC40A00F56C22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4611C08B2B7BC42000F56C22 /* ChatScreenTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		462B74BE2B62C4B400319B06 = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +383,8 @@
 		466CCE7B2B73DDB600551745 /* ChatScreen */ = {
 			isa = PBXGroup;
 			children = (
+				4611C08A2B7BC40A00F56C22 /* View */,
+				4611C0872B7BC1BD00F56C22 /* Controller */,
 				466CCE7C2B73DDC000551745 /* Model */,
 			);
 			path = ChatScreen;
@@ -615,11 +637,13 @@
 				466CCE822B73DEDF00551745 /* CoreDataChatMessage+CoreDataClass.swift in Sources */,
 				465EC5202B69547100451537 /* MusicScreenModel.swift in Sources */,
 				465114FB2B641C450047F357 /* SettingsCollectionViewCell.swift in Sources */,
+				4611C0892B7BC1D200F56C22 /* ChatScreenViewController.swift in Sources */,
 				465EC5292B6A9FAA00451537 /* ApplicationStorage.swift in Sources */,
 				465EC51D2B6947DA00451537 /* MusicSettingsCollectionViewCell.swift in Sources */,
 				462B74E32B62C5FA00319B06 /* R.generated.swift in Sources */,
 				466CCE762B73DAF200551745 /* DataModel.xcdatamodeld in Sources */,
 				465115012B641E1D0047F357 /* SettingsScreenModel.swift in Sources */,
+				4611C08C2B7BC42000F56C22 /* ChatScreenTableViewCell.swift in Sources */,
 				465EC52E2B6AA1D400451537 /* SettingsProvider.swift in Sources */,
 				466CCE7E2B73DDD400551745 /* MessageModel.swift in Sources */,
 				465EC51A2B6944DB00451537 /* MusicScreenViewController.swift in Sources */,

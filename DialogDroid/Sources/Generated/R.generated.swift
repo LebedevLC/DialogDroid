@@ -279,8 +279,11 @@ struct _R {
     let mainScreenViewController = mainScreenViewController()
     let settingsScreenViewController = settingsScreenViewController()
 
-    /// This struct is generated for `MainScreenViewController`, and contains static references to 1 segues.
+    /// This struct is generated for `MainScreenViewController`, and contains static references to 2 segues.
     struct mainScreenViewController {
+
+      /// Segue identifier `goToPlainChat`.
+      var goToPlainChat: RswiftResources.SegueIdentifier<UIKit.UIStoryboardSegue, MainScreenViewController, ChatScreenViewController> { .init(identifier: "goToPlainChat") }
 
       /// Segue identifier `goToSettings`.
       var goToSettings: RswiftResources.SegueIdentifier<UIKit.UIStoryboardSegue, MainScreenViewController, SettingsScreenViewController> { .init(identifier: "goToSettings") }
