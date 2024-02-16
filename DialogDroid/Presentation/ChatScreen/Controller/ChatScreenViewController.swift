@@ -9,30 +9,47 @@ import UIKit
 
 final class ChatScreenViewController: UIViewController {
     
-    // MARK: - Public Properties
-    
     // MARK: - Private Properties
     
-    @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var inputContainerView: UIView!
+    private lazy var mainView: ChatScreenView = {
+        let view = ChatScreenView()
+        view.tableView.dataSource = self
+        view.delegate = self
+        return view
+    }()
     
     private let servicesProvider: ServicesProvider = DefaultServicesProvider.shared
     
     private var model: [MessageModel] = []
+    private var lastIndex: IndexPath? {
+        guard !model.isEmpty else { return nil }
+        return IndexPath(row: model.count - 1, section: 0)
+    }
     
     // MARK: - Life Cycle
     
+    override func loadView() {
+        view = mainView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
+        setupModel()
     }
     
     override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
         configureNavigationBar()
+        if let lastIndex {
+            mainView.tableView.scrollToRow(at: lastIndex, at: .bottom, animated: animated)
+        }
+        addKeyboardObserver()
     }
     
-    // MARK: - Public Methods
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeKeyboardObserver()
+    }
     
     // MARK: - Actions
     
@@ -46,18 +63,42 @@ final class ChatScreenViewController: UIViewController {
         navigationItem.title = "Chat screen"
     }
     
-    private func configureTableView() {
+    private func setupModel() {
         do {
             model = try servicesProvider.coreDataManager.getAllChatMessages()
-            tableView.delegate = self
-            tableView.dataSource = self
-            tableView.register(ChatScreenTableViewCell.self, forCellReuseIdentifier: "ChatScreenTableViewCell")
-            tableView.reloadData()
-            tableView.showsVerticalScrollIndicator = false
-            tableView.showsHorizontalScrollIndicator = false
+            mainView.tableView.reloadData()
         } catch {
             print(error)
         }
+    }
+}
+
+// MARK: - ChatScreenViewDelegate
+
+extension ChatScreenViewController: ChatScreenViewDelegate {
+    func sendButtonDidTap(text: String?) {
+        guard let message = text else { return }
+        let messageModel = MessageModel(isFromUser: true, message: message, timestamp: Date())
+        do {
+            try servicesProvider.coreDataManager.saveChatMessage(messageModel)
+            model.append(messageModel)
+            guard let lastIndex else { return }
+            let tableView = mainView.tableView
+            tableView.performBatchUpdates({ tableView.insertRows(at: [lastIndex], with: .bottom) })
+            tableView.scrollToRow(at: lastIndex, at: .bottom, animated: true)
+            mainView.resetInput()
+            mainView.setSendButtonEnabled(isEnabled: false)
+        } catch {
+            print(error)
+        }
+    }
+    
+    func messageTextFieldChanged(text: String?) {
+        guard let text, !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            mainView.setSendButtonEnabled(isEnabled: false)
+            return
+        }
+        mainView.setSendButtonEnabled(isEnabled: true)
     }
 }
 
@@ -80,10 +121,55 @@ extension ChatScreenViewController: UITableViewDataSource {
     }
 }
 
-// MARK: - UITableViewDelegate
+// MARK: - Keyboard
 
-extension ChatScreenViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+private extension ChatScreenViewController {
+    func addKeyboardObserver() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleKeyboardWillShow(_:)),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil
+        )
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleKeyboardWillHide(_:)),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil
+        )
+    }
+    
+    func removeKeyboardObserver() {
+        NotificationCenter.default.removeObserver(
+            self,
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil
+        )
+        NotificationCenter.default.removeObserver(
+            self,
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil
+        )
+    }
+    
+    @objc func handleKeyboardWillShow(_ notification: Notification) {
+        guard let animationInf = notification.keyboardAnimationInfo else { return }
+        mainView.animateKeyboardHeightChange(
+            to: animationInf.height,
+            with: animationInf.duration,
+            options: animationInf.options
+        ) { [weak self] in
+            guard let self, let lastIndex else { return }
+            self.mainView.tableView.scrollToRow(at: lastIndex, at: .bottom, animated: true)
+        }
+    }
+    
+    @objc func handleKeyboardWillHide(_ notification: Notification) {
+        guard let animationInf = notification.keyboardAnimationInfo else { return }
+        mainView.animateKeyboardHeightChange(
+            to: 0.0,
+            with: animationInf.duration,
+            options: animationInf.options
+        )
     }
 }

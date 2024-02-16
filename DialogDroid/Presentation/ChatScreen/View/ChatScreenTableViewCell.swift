@@ -87,6 +87,8 @@ final class ChatScreenTableViewCell: UITableViewCell {
     // MARK: - Private Methods
     
     private func setupUI() {
+        backgroundColor = .clear
+        
         avatarImageView.layer.cornerRadius = 20
         avatarImageView.layer.cornerCurve = .continuous
         avatarImageView.layer.masksToBounds = true

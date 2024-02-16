@@ -9,6 +9,7 @@ import CoreData
 
 protocol CoreDataManager {
     func getAllChatMessages() throws -> [MessageModel]
+    @discardableResult
     func saveChatMessage(_ model: MessageModel) throws -> Bool
     func deleteAllMessages() throws
 }
@@ -29,11 +30,12 @@ final class DefaultCoreDataManager: CoreDataManager {
     
     func getAllChatMessages() throws -> [MessageModel] {
         let key = #keyPath(CoreDataChatMessage.timestamp)
-        let sortByDate = NSSortDescriptor(key: key, ascending: false)
+        let sortByDate = NSSortDescriptor(key: key, ascending: true)
         let coreDataChatMessage = try database.fetchObjects(ofType: CoreDataChatMessage.self, sortBy: [sortByDate])
         return coreDataChatMessage.compactMap({ MessageModel(from: $0) })
     }
     
+    @discardableResult
     func saveChatMessage(_ model: MessageModel) throws -> Bool {
         let coreDataChatMessage = try database.createObject(from: CoreDataChatMessage.self)
         coreDataChatMessage.populate(from: model)

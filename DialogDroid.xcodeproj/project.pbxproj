@@ -36,6 +36,7 @@
 		466CCE7E2B73DDD400551745 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CCE7D2B73DDD400551745 /* MessageModel.swift */; };
 		466CCE822B73DEDF00551745 /* CoreDataChatMessage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CCE802B73DEDF00551745 /* CoreDataChatMessage+CoreDataClass.swift */; };
 		466CCE832B73DEDF00551745 /* CoreDataChatMessage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CCE812B73DEDF00551745 /* CoreDataChatMessage+CoreDataProperties.swift */; };
+		467014AA2B7F7BBC00C09328 /* ChatScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467014A92B7F7BBC00C09328 /* ChatScreenView.swift */; };
 		46D1B3642B78C80000BF323E /* music2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46D1B35D2B78C7FF00BF323E /* music2.mp3 */; };
 		46D1B3652B78C80000BF323E /* music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46D1B35E2B78C7FF00BF323E /* music1.mp3 */; };
 		46D1B3662B78C80000BF323E /* music3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46D1B35F2B78C80000BF323E /* music3.mp3 */; };
@@ -46,6 +47,8 @@
 		46D1B36D2B78C82800BF323E /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D1B36C2B78C82800BF323E /* MusicPlayer.swift */; };
 		46D1B36F2B78C8F300BF323E /* MusicPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D1B36E2B78C8F300BF323E /* MusicPlayerManager.swift */; };
 		46E8FA222B71473200BCA83E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46E8FA242B71473200BCA83E /* Localizable.strings */; };
+		46EAE11F2B7F869300082E39 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EAE11E2B7F869300082E39 /* Notification+Extensions.swift */; };
+		46EAE1212B7F86E400082E39 /* UIView.AnimationOptions+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EAE1202B7F86E400082E39 /* UIView.AnimationOptions+Extensions.swift */; };
 		AB8ECD8F206C99F039CBE635 /* Pods_DialogDroid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA909A4C53EC84651296C718 /* Pods_DialogDroid.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +86,7 @@
 		466CCE7D2B73DDD400551745 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		466CCE802B73DEDF00551745 /* CoreDataChatMessage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataChatMessage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		466CCE812B73DEDF00551745 /* CoreDataChatMessage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataChatMessage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		467014A92B7F7BBC00C09328 /* ChatScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenView.swift; sourceTree = "<group>"; };
 		46D1B35D2B78C7FF00BF323E /* music2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music2.mp3; sourceTree = "<group>"; };
 		46D1B35E2B78C7FF00BF323E /* music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music1.mp3; sourceTree = "<group>"; };
 		46D1B35F2B78C80000BF323E /* music3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music3.mp3; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 		46D1B36E2B78C8F300BF323E /* MusicPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerManager.swift; sourceTree = "<group>"; };
 		46E8FA232B71473200BCA83E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		46E8FA252B71474400BCA83E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		46EAE11E2B7F869300082E39 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
+		46EAE1202B7F86E400082E39 /* UIView.AnimationOptions+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView.AnimationOptions+Extensions.swift"; sourceTree = "<group>"; };
 		BA909A4C53EC84651296C718 /* Pods_DialogDroid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DialogDroid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -121,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				4611C08B2B7BC42000F56C22 /* ChatScreenTableViewCell.swift */,
+				467014A92B7F7BBC00C09328 /* ChatScreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -349,6 +356,8 @@
 			isa = PBXGroup;
 			children = (
 				465EC52B2B6AA0DC00451537 /* Bundle+Extensions.swift */,
+				46EAE11E2B7F869300082E39 /* Notification+Extensions.swift */,
+				46EAE1202B7F86E400082E39 /* UIView.AnimationOptions+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -632,6 +641,7 @@
 				462B74CF2B62C4B400319B06 /* MainScreenViewController.swift in Sources */,
 				462B74CB2B62C4B400319B06 /* AppDelegate.swift in Sources */,
 				466CCE732B73D74300551745 /* CoreDataManager.swift in Sources */,
+				46EAE11F2B7F869300082E39 /* Notification+Extensions.swift in Sources */,
 				462B74CD2B62C4B400319B06 /* SceneDelegate.swift in Sources */,
 				465EC52C2B6AA0DC00451537 /* Bundle+Extensions.swift in Sources */,
 				466CCE822B73DEDF00551745 /* CoreDataChatMessage+CoreDataClass.swift in Sources */,
@@ -640,12 +650,14 @@
 				4611C0892B7BC1D200F56C22 /* ChatScreenViewController.swift in Sources */,
 				465EC5292B6A9FAA00451537 /* ApplicationStorage.swift in Sources */,
 				465EC51D2B6947DA00451537 /* MusicSettingsCollectionViewCell.swift in Sources */,
+				46EAE1212B7F86E400082E39 /* UIView.AnimationOptions+Extensions.swift in Sources */,
 				462B74E32B62C5FA00319B06 /* R.generated.swift in Sources */,
 				466CCE762B73DAF200551745 /* DataModel.xcdatamodeld in Sources */,
 				465115012B641E1D0047F357 /* SettingsScreenModel.swift in Sources */,
 				4611C08C2B7BC42000F56C22 /* ChatScreenTableViewCell.swift in Sources */,
 				465EC52E2B6AA1D400451537 /* SettingsProvider.swift in Sources */,
 				466CCE7E2B73DDD400551745 /* MessageModel.swift in Sources */,
+				467014AA2B7F7BBC00C09328 /* ChatScreenView.swift in Sources */,
 				465EC51A2B6944DB00451537 /* MusicScreenViewController.swift in Sources */,
 				465114F72B641BC50047F357 /* SettingsScreenViewController.swift in Sources */,
 			);

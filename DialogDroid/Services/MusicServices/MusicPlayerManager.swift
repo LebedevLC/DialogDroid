@@ -30,8 +30,8 @@ final class DefaultMusicPlayerManager: MusicPlayerManager {
     // MARK: - Public Methods
     
     func changePlaying(isMusicOn: Bool) {
+        settingsStorage.isMusicOn = isMusicOn
         if isMusicOn {
-            settingsStorage.isMusicOn = true
             configureMusic()
         } else {
             musicPlayer.stop()
