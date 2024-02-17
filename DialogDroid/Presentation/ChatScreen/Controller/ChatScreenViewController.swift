@@ -40,15 +40,20 @@ final class ChatScreenViewController: UIViewController {
     override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
         configureNavigationBar()
-        if let lastIndex {
-            mainView.tableView.scrollToRow(at: lastIndex, at: .bottom, animated: animated)
-        }
+        mainView.setRoleTitle(ChatRole(rawValue: servicesProvider.settingsStorage.selectedRoleIndex)?.shortTitle)
         addKeyboardObserver()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         removeKeyboardObserver()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let lastIndex {
+            mainView.tableView.scrollToRow(at: lastIndex, at: .bottom, animated: animated)
+        }
     }
     
     // MARK: - Actions
@@ -99,6 +104,10 @@ extension ChatScreenViewController: ChatScreenViewDelegate {
             return
         }
         mainView.setSendButtonEnabled(isEnabled: true)
+    }
+    
+    func roleIndicatorDidTap() {
+        performSegue(withIdentifier: "goToChatRoleScreen", sender: nil)
     }
 }
 

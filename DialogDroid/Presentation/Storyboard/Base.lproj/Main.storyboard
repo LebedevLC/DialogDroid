@@ -144,10 +144,51 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="hp5-Ll-vwd" kind="show" identifier="goToChatRoleScreen" id="N5s-GO-tPc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqt-IR-wMn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1968.7022900763359" y="208.45070422535213"/>
+        </scene>
+        <!--RoleScreen-->
+        <scene sceneID="F9m-uN-ffi">
+            <objects>
+                <viewController id="hp5-Ll-vwd" customClass="RoleScreenViewController" customModule="DialogDroid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q4r-2u-v0l">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vDC-It-QeX">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ksx-K3-6rt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ksx-K3-6rt" firstAttribute="trailing" secondItem="vDC-It-QeX" secondAttribute="trailing" id="30x-iH-qy5"/>
+                            <constraint firstItem="ksx-K3-6rt" firstAttribute="bottom" secondItem="vDC-It-QeX" secondAttribute="bottom" id="EFX-rz-u48"/>
+                            <constraint firstItem="vDC-It-QeX" firstAttribute="top" secondItem="ksx-K3-6rt" secondAttribute="top" id="QRv-Gx-ZKJ"/>
+                            <constraint firstItem="vDC-It-QeX" firstAttribute="leading" secondItem="ksx-K3-6rt" secondAttribute="leading" id="tFM-80-Kli"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="RoleScreen" id="xuV-Tk-d3z">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="eUD-Wo-nJB">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backButtonDidTap:" destination="hp5-Ll-vwd" id="Wrg-Tp-S8s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="vDC-It-QeX" id="KZZ-AG-sBJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ofK-AP-hG0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2775" y="220"/>
         </scene>
         <!--Title2-->
         <scene sceneID="8Ba-4o-6q3">
@@ -296,7 +337,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
-            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

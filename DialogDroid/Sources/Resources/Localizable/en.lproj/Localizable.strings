@@ -25,3 +25,19 @@
 "musicCollectionItemJazz" = "Jazz music";
 "musicCollectionItemPop" = "Pop music";
 "musicCollectionItemLight" = "Light beat music";
+
+"chatRoleTitleDialog" = "Dialogue: Virtual Conversation";
+"chatRoleShortTitleDialog" = "Dialogue";
+"chatRoleDescriptionDialog" = "In this role, the bot becomes indispensable for finding information, performing daily tasks, and providing recommendations";
+
+"chatRoleTitleTeacher" = "Teacher: Guide to the World of Knowledge";
+"chatRoleShortTitleTeacher" = "Teacher";
+"chatRoleDescriptionTeacher" = "Utilizing in-depth knowledge in various fields and with the ability to tailor teaching methods to each user's needs, the teacher bot opens doors to the world of education";
+
+"chatRoleTitleFriend" = "Friend: Digital Companion";
+"chatRoleShortTitleFriend" = "Friend";
+"chatRoleDescriptionFriend" = "In this role, the bot goes beyond the usual interactions, becoming a true friend who is always there for you";
+
+"chatRoleTitleLover" = "Love: Virtual Intimacy";
+"chatRoleShortTitleLover" = "Love";
+"chatRoleDescriptionLover" = "Reaching new horizons in human-machine relationships, the bot in this role explores complex feelings such as attachment and love";

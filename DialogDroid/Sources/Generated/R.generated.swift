@@ -72,9 +72,93 @@ struct _R {
     }
 
 
-    /// This `_R.string.localizable` struct is generated, and contains static references to 15 localization keys.
+    /// This `_R.string.localizable` struct is generated, and contains static references to 27 localization keys.
     struct localizable {
       let source: RswiftResources.StringResource.Source
+
+      /// en translation: In this role, the bot becomes indispensable for finding information, performing daily tasks, and providing recommendations
+      ///
+      /// Key: chatRoleDescriptionDialog
+      ///
+      /// Locales: en, ru
+      var chatRoleDescriptionDialog: RswiftResources.StringResource { .init(key: "chatRoleDescriptionDialog", tableName: "Localizable", source: source, developmentValue: "In this role, the bot becomes indispensable for finding information, performing daily tasks, and providing recommendations", comment: nil) }
+
+      /// en translation: In this role, the bot goes beyond the usual interactions, becoming a true friend who is always there for you
+      ///
+      /// Key: chatRoleDescriptionFriend
+      ///
+      /// Locales: en, ru
+      var chatRoleDescriptionFriend: RswiftResources.StringResource { .init(key: "chatRoleDescriptionFriend", tableName: "Localizable", source: source, developmentValue: "In this role, the bot goes beyond the usual interactions, becoming a true friend who is always there for you", comment: nil) }
+
+      /// en translation: Reaching new horizons in human-machine relationships, the bot in this role explores complex feelings such as attachment and love
+      ///
+      /// Key: chatRoleDescriptionLover
+      ///
+      /// Locales: en, ru
+      var chatRoleDescriptionLover: RswiftResources.StringResource { .init(key: "chatRoleDescriptionLover", tableName: "Localizable", source: source, developmentValue: "Reaching new horizons in human-machine relationships, the bot in this role explores complex feelings such as attachment and love", comment: nil) }
+
+      /// en translation: Utilizing in-depth knowledge in various fields and with the ability to tailor teaching methods to each user's needs, the teacher bot opens doors to the world of education
+      ///
+      /// Key: chatRoleDescriptionTeacher
+      ///
+      /// Locales: en, ru
+      var chatRoleDescriptionTeacher: RswiftResources.StringResource { .init(key: "chatRoleDescriptionTeacher", tableName: "Localizable", source: source, developmentValue: "Utilizing in-depth knowledge in various fields and with the ability to tailor teaching methods to each user's needs, the teacher bot opens doors to the world of education", comment: nil) }
+
+      /// en translation: Dialogue
+      ///
+      /// Key: chatRoleShortTitleDialog
+      ///
+      /// Locales: en, ru
+      var chatRoleShortTitleDialog: RswiftResources.StringResource { .init(key: "chatRoleShortTitleDialog", tableName: "Localizable", source: source, developmentValue: "Dialogue", comment: nil) }
+
+      /// en translation: Friend
+      ///
+      /// Key: chatRoleShortTitleFriend
+      ///
+      /// Locales: en, ru
+      var chatRoleShortTitleFriend: RswiftResources.StringResource { .init(key: "chatRoleShortTitleFriend", tableName: "Localizable", source: source, developmentValue: "Friend", comment: nil) }
+
+      /// en translation: Love
+      ///
+      /// Key: chatRoleShortTitleLover
+      ///
+      /// Locales: en, ru
+      var chatRoleShortTitleLover: RswiftResources.StringResource { .init(key: "chatRoleShortTitleLover", tableName: "Localizable", source: source, developmentValue: "Love", comment: nil) }
+
+      /// en translation: Teacher
+      ///
+      /// Key: chatRoleShortTitleTeacher
+      ///
+      /// Locales: en, ru
+      var chatRoleShortTitleTeacher: RswiftResources.StringResource { .init(key: "chatRoleShortTitleTeacher", tableName: "Localizable", source: source, developmentValue: "Teacher", comment: nil) }
+
+      /// en translation: Dialogue: Virtual Conversation
+      ///
+      /// Key: chatRoleTitleDialog
+      ///
+      /// Locales: en, ru
+      var chatRoleTitleDialog: RswiftResources.StringResource { .init(key: "chatRoleTitleDialog", tableName: "Localizable", source: source, developmentValue: "Dialogue: Virtual Conversation", comment: nil) }
+
+      /// en translation: Friend: Digital Companion
+      ///
+      /// Key: chatRoleTitleFriend
+      ///
+      /// Locales: en, ru
+      var chatRoleTitleFriend: RswiftResources.StringResource { .init(key: "chatRoleTitleFriend", tableName: "Localizable", source: source, developmentValue: "Friend: Digital Companion", comment: nil) }
+
+      /// en translation: Love: Virtual Intimacy
+      ///
+      /// Key: chatRoleTitleLover
+      ///
+      /// Locales: en, ru
+      var chatRoleTitleLover: RswiftResources.StringResource { .init(key: "chatRoleTitleLover", tableName: "Localizable", source: source, developmentValue: "Love: Virtual Intimacy", comment: nil) }
+
+      /// en translation: Teacher: Guide to the World of Knowledge
+      ///
+      /// Key: chatRoleTitleTeacher
+      ///
+      /// Locales: en, ru
+      var chatRoleTitleTeacher: RswiftResources.StringResource { .init(key: "chatRoleTitleTeacher", tableName: "Localizable", source: source, developmentValue: "Teacher: Guide to the World of Knowledge", comment: nil) }
 
       /// en translation: Start communicating with the AI
       ///
@@ -274,10 +358,18 @@ struct _R {
     var music7Mp3: RswiftResources.FileResource { .init(name: "music7", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
   }
 
-  /// This `_R.segue` struct is generated, and contains static references to 2 view controllers.
+  /// This `_R.segue` struct is generated, and contains static references to 3 view controllers.
   struct segue {
+    let chatScreenViewController = chatScreenViewController()
     let mainScreenViewController = mainScreenViewController()
     let settingsScreenViewController = settingsScreenViewController()
+
+    /// This struct is generated for `ChatScreenViewController`, and contains static references to 1 segues.
+    struct chatScreenViewController {
+
+      /// Segue identifier `goToChatRoleScreen`.
+      var goToChatRoleScreen: RswiftResources.SegueIdentifier<UIKit.UIStoryboardSegue, ChatScreenViewController, RoleScreenViewController> { .init(identifier: "goToChatRoleScreen") }
+    }
 
     /// This struct is generated for `MainScreenViewController`, and contains static references to 2 segues.
     struct mainScreenViewController {
@@ -297,12 +389,15 @@ struct _R {
     }
   }
 
-  /// This `_R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `_R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
     let bundle: Foundation.Bundle
 
     /// Nib `MusicSettingsCollectionViewCell`.
     var musicSettingsCollectionViewCell: RswiftResources.NibReferenceReuseIdentifier<MusicSettingsCollectionViewCell, MusicSettingsCollectionViewCell> { .init(name: "MusicSettingsCollectionViewCell", bundle: bundle, identifier: "MusicSettingsCollectionViewCell") }
+
+    /// Nib `RoleScreenTableViewCell`.
+    var roleScreenTableViewCell: RswiftResources.NibReference<RoleScreenTableViewCell> { .init(name: "RoleScreenTableViewCell", bundle: bundle) }
 
     /// Nib `SettingsCollectionViewCell`.
     var settingsCollectionViewCell: RswiftResources.NibReferenceReuseIdentifier<SettingsCollectionViewCell, SettingsCollectionViewCell> { .init(name: "SettingsCollectionViewCell", bundle: bundle, identifier: "SettingsCollectionViewCell") }

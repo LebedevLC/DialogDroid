@@ -25,3 +25,19 @@
 "musicCollectionItemJazz" = "Джазз музыка";
 "musicCollectionItemPop" = "Поп музыка";
 "musicCollectionItemLight" = "Легкие битовые";
+
+"chatRoleTitleDialog" = "Диалог: Виртуальный Собеседник";
+"chatRoleShortTitleDialog" = "Диалог";
+"chatRoleDescriptionDialog" = "В этой роли бот становится незаменимым помощником в поиске информации, выполнении повседневных задач и предоставлении рекомендаций";
+
+"chatRoleTitleTeacher" = "Учитель: Проводник в Мире Знаний";
+"chatRoleShortTitleTeacher" = "Учитель";
+"chatRoleDescriptionTeacher" = "Используя глубокие знания в различных областях и обладая способностью адаптировать методы обучения под нужды каждого пользователя, бот-учитель открывает двери в мир образования";
+
+"chatRoleTitleFriend" = "Друг: Цифровой Компаньон";
+"chatRoleShortTitleFriend" = "Друг";
+"chatRoleDescriptionFriend" = "В этой роли бот выходит за рамки привычного взаимодействия, становясь истинным другом, который всегда рядом";
+
+"chatRoleTitleLover" = "Любовь: Виртуальное Чувство Интимности";
+"chatRoleShortTitleLover" = "Любовь";
+"chatRoleDescriptionLover" = "Достигая новых горизонтов в отношениях между человеком и машиной, бот в этой роли исследует комплексные чувства, такие как привязанность и любовь";

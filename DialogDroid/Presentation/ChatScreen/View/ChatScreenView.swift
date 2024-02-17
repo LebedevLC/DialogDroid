@@ -10,6 +10,7 @@ import UIKit
 protocol ChatScreenViewDelegate: AnyObject {
     func sendButtonDidTap(text: String?)
     func messageTextFieldChanged(text: String?)
+    func roleIndicatorDidTap()
 }
 
 final class ChatScreenView: UIView {
@@ -61,6 +62,23 @@ final class ChatScreenView: UIView {
         return button
     }()
     
+    private lazy var roleIndicatorView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.borderColor = UIColor.black.withAlphaComponent(0.5).cgColor
+        view.layer.borderWidth = 1
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(roleIndicatorViewDidTap)))
+        return view
+    }()
+    
+    private let roleIndicatorLabel: UILabel = {
+        let label = UILabel()
+        label.minimumScaleFactor = 0.2
+        label.adjustsFontSizeToFitWidth = true
+        label.textAlignment = .center
+        return label
+    }()
+    
     private lazy var inputContainerViewBottomConstraint = {
         inputContainerView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
     }()
@@ -81,6 +99,7 @@ final class ChatScreenView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         sendButton.layer.cornerRadius = sendButton.frame.width / 2
+        roleIndicatorView.layer.cornerRadius = roleIndicatorView.frame.height / 2
         sendButton.layer.shadowPath = UIBezierPath(
             roundedRect: sendButton.bounds, cornerRadius: sendButton.layer.cornerRadius
         ).cgPath
@@ -125,6 +144,10 @@ final class ChatScreenView: UIView {
         )
     }
     
+    func setRoleTitle(_ title: String?) {
+        roleIndicatorLabel.text = title
+    }
+    
     // MARK: - Actions
     
     @objc private func sendButtonDidTap() {
@@ -133,6 +156,10 @@ final class ChatScreenView: UIView {
     
     @objc private func messageTextFieldEditingChanged() {
         delegate?.messageTextFieldChanged(text: messageTextField.text)
+    }
+    
+    @objc private func roleIndicatorViewDidTap() {
+        delegate?.roleIndicatorDidTap()
     }
     
     // MARK: - Private Methods
@@ -146,7 +173,15 @@ final class ChatScreenView: UIView {
     }
     
     private func addSubviews() {
-        [tableView, inputContainerView, falseInputContainerView, messageTextField, sendButton].forEach({
+        [
+            tableView,
+            roleIndicatorView,
+            roleIndicatorLabel,
+            inputContainerView,
+            falseInputContainerView,
+            messageTextField,
+            sendButton
+        ].forEach({
             $0.translatesAutoresizingMaskIntoConstraints = false
             addSubview($0)
         })
@@ -194,7 +229,16 @@ final class ChatScreenView: UIView {
             messageTextField.leadingAnchor.constraint(equalTo: inputContainerView.leadingAnchor, constant: 24),
             messageTextField.trailingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: -16),
             messageTextField.centerYAnchor.constraint(equalTo: sendButton.centerYAnchor),
-            messageTextField.heightAnchor.constraint(equalToConstant: 36)
+            messageTextField.heightAnchor.constraint(equalToConstant: 36),
+            
+            roleIndicatorView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            roleIndicatorView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.3),
+            roleIndicatorView.heightAnchor.constraint(equalToConstant: 36),
+            roleIndicatorView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            
+            roleIndicatorLabel.leadingAnchor.constraint(equalTo: roleIndicatorView.leadingAnchor, constant: 4),
+            roleIndicatorLabel.trailingAnchor.constraint(equalTo: roleIndicatorView.trailingAnchor, constant: -4),
+            roleIndicatorLabel.centerYAnchor.constraint(equalTo: roleIndicatorView.centerYAnchor)
         ])
     }
 }
