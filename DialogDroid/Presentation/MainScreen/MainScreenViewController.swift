@@ -22,45 +22,7 @@ class MainScreenViewController: UIViewController {
         super.viewDidLoad()
         checkIfLaunchBefore()
         setupLabels()
-//        test()
     }
-    
-//    func test() {
-//        let text1 = """
-//Сообщается, что в некоторых случаях экран часов может произвольно дёргаться, активировать нажатия в случайном месте и вообще всячески мешать пользователю.
-//В Apple уведомили СЦ, что проблема на стороне софта и в ближайшем обновлении её должны пофиксить. Так что такие устройства временно не принимаются для обмена или ремонта.
-//"""
-//        let text2 = "Hello world"
-//        let db = servicesProvider.coreDataManager
-//        try? db.saveChatMessage(
-//            MessageModel(
-//                isFromUser: true,
-//                message: text1,
-//                timestamp: Date()
-//            )
-//        )
-//        try? db.saveChatMessage(
-//            MessageModel(
-//                isFromUser: true,
-//                message: text2,
-//                timestamp: Date()
-//            )
-//        )
-//        try? db.saveChatMessage(
-//            MessageModel(
-//                isFromUser: false,
-//                message: text1,
-//                timestamp: Date()
-//            )
-//        )
-//        try? db.saveChatMessage(
-//            MessageModel(
-//                isFromUser: false,
-//                message: text2,
-//                timestamp: Date()
-//            )
-//        )
-//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

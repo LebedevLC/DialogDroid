@@ -51,4 +51,17 @@ enum ChatRole: Int, CaseIterable {
             return R.string.localizable.chatRoleDescriptionLover()
         }
     }
+    
+    var promptAI: String {
+        switch self {
+        case .dialog:
+            return R.string.notLocalizable.promptDialog()
+        case .teacher:
+            return R.string.notLocalizable.promptTeacher()
+        case .friend:
+            return R.string.notLocalizable.promptFriend()
+        case .lover:
+            return R.string.notLocalizable.promptLover()
+        }
+    }
 }

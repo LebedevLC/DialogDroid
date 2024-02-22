@@ -30,6 +30,8 @@
 		465EC52C2B6AA0DC00451537 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EC52B2B6AA0DC00451537 /* Bundle+Extensions.swift */; };
 		465EC52E2B6AA1D400451537 /* SettingsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EC52D2B6AA1D400451537 /* SettingsProvider.swift */; };
 		4666BE482B62D74B00D40241 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666BE472B62D74B00D40241 /* CornerView.swift */; };
+		4669DFBB2B87C66300227907 /* AIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669DFBA2B87C66300227907 /* AIManager.swift */; };
+		4669DFBF2B87C85100227907 /* NotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4669DFBE2B87C85100227907 /* NotLocalizable.strings */; };
 		466CCE712B73D46A00551745 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CCE702B73D46A00551745 /* CoreDataService.swift */; };
 		466CCE732B73D74300551745 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CCE722B73D74200551745 /* CoreDataManager.swift */; };
 		466CCE762B73DAF200551745 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 466CCE742B73DAF200551745 /* DataModel.xcdatamodeld */; };
@@ -41,6 +43,12 @@
 		4687F2DF2B80F3EF00DEF663 /* RoleScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F2DD2B80F3EF00DEF663 /* RoleScreenTableViewCell.swift */; };
 		4687F2E02B80F3EF00DEF663 /* RoleScreenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4687F2DE2B80F3EF00DEF663 /* RoleScreenTableViewCell.xib */; };
 		4687F2E42B80F86300DEF663 /* ChatRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F2E32B80F86300DEF663 /* ChatRole.swift */; };
+		46BFE29D2B8509F900FDA585 /* AIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFE29C2B8509F900FDA585 /* AIClient.swift */; };
+		46BFE29F2B850AD400FDA585 /* AIClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFE29E2B850AD400FDA585 /* AIClientModel.swift */; };
+		46BFE2A12B850B5500FDA585 /* AIClientModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFE2A02B850B5500FDA585 /* AIClientModelType.swift */; };
+		46BFE2A32B850C1600FDA585 /* AIClientEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFE2A22B850C1600FDA585 /* AIClientEndpoint.swift */; };
+		46BFE2A52B850CD100FDA585 /* AIClientCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFE2A42B850CD100FDA585 /* AIClientCommand.swift */; };
+		46BFE2A72B850EF800FDA585 /* ApplicationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BFE2A62B850EF800FDA585 /* ApplicationConstants.swift */; };
 		46D1B3642B78C80000BF323E /* music2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46D1B35D2B78C7FF00BF323E /* music2.mp3 */; };
 		46D1B3652B78C80000BF323E /* music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46D1B35E2B78C7FF00BF323E /* music1.mp3 */; };
 		46D1B3662B78C80000BF323E /* music3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46D1B35F2B78C80000BF323E /* music3.mp3 */; };
@@ -84,6 +92,8 @@
 		465EC52B2B6AA0DC00451537 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		465EC52D2B6AA1D400451537 /* SettingsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProvider.swift; sourceTree = "<group>"; };
 		4666BE472B62D74B00D40241 /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
+		4669DFBA2B87C66300227907 /* AIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIManager.swift; sourceTree = "<group>"; };
+		4669DFBE2B87C85100227907 /* NotLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = NotLocalizable.strings; sourceTree = "<group>"; };
 		466CCE702B73D46A00551745 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		466CCE722B73D74200551745 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		466CCE752B73DAF200551745 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -95,6 +105,12 @@
 		4687F2DD2B80F3EF00DEF663 /* RoleScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleScreenTableViewCell.swift; sourceTree = "<group>"; };
 		4687F2DE2B80F3EF00DEF663 /* RoleScreenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoleScreenTableViewCell.xib; sourceTree = "<group>"; };
 		4687F2E32B80F86300DEF663 /* ChatRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRole.swift; sourceTree = "<group>"; };
+		46BFE29C2B8509F900FDA585 /* AIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIClient.swift; sourceTree = "<group>"; };
+		46BFE29E2B850AD400FDA585 /* AIClientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIClientModel.swift; sourceTree = "<group>"; };
+		46BFE2A02B850B5500FDA585 /* AIClientModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIClientModelType.swift; sourceTree = "<group>"; };
+		46BFE2A22B850C1600FDA585 /* AIClientEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIClientEndpoint.swift; sourceTree = "<group>"; };
+		46BFE2A42B850CD100FDA585 /* AIClientCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIClientCommand.swift; sourceTree = "<group>"; };
+		46BFE2A62B850EF800FDA585 /* ApplicationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConstants.swift; sourceTree = "<group>"; };
 		46D1B35D2B78C7FF00BF323E /* music2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music2.mp3; sourceTree = "<group>"; };
 		46D1B35E2B78C7FF00BF323E /* music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music1.mp3; sourceTree = "<group>"; };
 		46D1B35F2B78C80000BF323E /* music3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music3.mp3; sourceTree = "<group>"; };
@@ -186,6 +202,7 @@
 				46D1B35C2B78C7F300BF323E /* Music */,
 				46E8FA1F2B71470700BCA83E /* Localizable */,
 				462B74D32B62C4B500319B06 /* Assets.xcassets */,
+				4669DFBE2B87C85100227907 /* NotLocalizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -211,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				462B74D82B62C4B500319B06 /* Info.plist */,
+				46BFE2A62B850EF800FDA585 /* ApplicationConstants.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -335,6 +353,7 @@
 		465EC5212B6A9CC500451537 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				46BFE29A2B8509D800FDA585 /* Network */,
 				46D1B36B2B78C80F00BF323E /* MusicServices */,
 				465EC5232B6A9CDD00451537 /* Persistency */,
 				465EC5222B6A9CD300451537 /* ServiceProvider */,
@@ -458,6 +477,27 @@
 				4687F2E32B80F86300DEF663 /* ChatRole.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		46BFE29A2B8509D800FDA585 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				46BFE29B2B8509E100FDA585 /* AIClient */,
+				4669DFBA2B87C66300227907 /* AIManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		46BFE29B2B8509E100FDA585 /* AIClient */ = {
+			isa = PBXGroup;
+			children = (
+				46BFE29C2B8509F900FDA585 /* AIClient.swift */,
+				46BFE2A22B850C1600FDA585 /* AIClientEndpoint.swift */,
+				46BFE2A42B850CD100FDA585 /* AIClientCommand.swift */,
+				46BFE29E2B850AD400FDA585 /* AIClientModel.swift */,
+				46BFE2A02B850B5500FDA585 /* AIClientModelType.swift */,
+			);
+			path = AIClient;
 			sourceTree = "<group>";
 		};
 		46D1B35C2B78C7F300BF323E /* Music */ = {
@@ -584,6 +624,7 @@
 				465114FC2B641C450047F357 /* SettingsCollectionViewCell.xib in Resources */,
 				46D1B3682B78C80000BF323E /* music6.mp3 in Resources */,
 				465EC51E2B6947DA00451537 /* MusicSettingsCollectionViewCell.xib in Resources */,
+				4669DFBF2B87C85100227907 /* NotLocalizable.strings in Resources */,
 				46D1B36A2B78C80000BF323E /* music7.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,6 +717,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BFE2A12B850B5500FDA585 /* AIClientModelType.swift in Sources */,
 				466CCE712B73D46A00551745 /* CoreDataService.swift in Sources */,
 				465EC5272B6A9D1A00451537 /* ApplicationSettings.swift in Sources */,
 				466CCE832B73DEDF00551745 /* CoreDataChatMessage+CoreDataProperties.swift in Sources */,
@@ -694,8 +736,11 @@
 				465114FB2B641C450047F357 /* SettingsCollectionViewCell.swift in Sources */,
 				4611C0892B7BC1D200F56C22 /* ChatScreenViewController.swift in Sources */,
 				465EC5292B6A9FAA00451537 /* ApplicationStorage.swift in Sources */,
+				46BFE2A32B850C1600FDA585 /* AIClientEndpoint.swift in Sources */,
+				46BFE2A52B850CD100FDA585 /* AIClientCommand.swift in Sources */,
 				465EC51D2B6947DA00451537 /* MusicSettingsCollectionViewCell.swift in Sources */,
 				4687F2DF2B80F3EF00DEF663 /* RoleScreenTableViewCell.swift in Sources */,
+				46BFE29F2B850AD400FDA585 /* AIClientModel.swift in Sources */,
 				46EAE1212B7F86E400082E39 /* UIView.AnimationOptions+Extensions.swift in Sources */,
 				462B74E32B62C5FA00319B06 /* R.generated.swift in Sources */,
 				466CCE762B73DAF200551745 /* DataModel.xcdatamodeld in Sources */,
@@ -705,8 +750,11 @@
 				466CCE7E2B73DDD400551745 /* MessageModel.swift in Sources */,
 				4687F2E42B80F86300DEF663 /* ChatRole.swift in Sources */,
 				467014AA2B7F7BBC00C09328 /* ChatScreenView.swift in Sources */,
+				4669DFBB2B87C66300227907 /* AIManager.swift in Sources */,
 				465EC51A2B6944DB00451537 /* MusicScreenViewController.swift in Sources */,
+				46BFE29D2B8509F900FDA585 /* AIClient.swift in Sources */,
 				4687F2DB2B80F2EC00DEF663 /* RoleScreenViewController.swift in Sources */,
+				46BFE2A72B850EF800FDA585 /* ApplicationConstants.swift in Sources */,
 				465114F72B641BC50047F357 /* SettingsScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

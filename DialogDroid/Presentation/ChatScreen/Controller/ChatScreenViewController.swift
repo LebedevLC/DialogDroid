@@ -76,6 +76,47 @@ final class ChatScreenViewController: UIViewController {
             print(error)
         }
     }
+    
+    private func sendMessage() {
+        servicesProvider.aiManager.getDialogueResponse(
+            model,
+            role: ChatRole(rawValue: servicesProvider.settingsStorage.selectedRoleIndex) ?? .dialog
+        ) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let text):
+                DispatchQueue.main.async {
+                    let newMessage = MessageModel(isFromUser: false, message: text, timestamp: Date())
+                    self.saveMessage(newMessage)
+                }
+            case .failure(let failure):
+                DispatchQueue.main.async {
+                    let text = "Dialogue fail = \(failure.localizedDescription)"
+                    let newMessage = MessageModel(isFromUser: false, message: text, timestamp: Date())
+                    self.saveMessage(newMessage)
+                }
+            }
+        }
+    }
+    
+    private func saveMessage(_ message: MessageModel) {
+        do {
+            model.append(message)
+            try servicesProvider.coreDataManager.saveChatMessage(message)
+            addMessageToTable()
+        } catch {
+            print(error)
+        }
+    }
+    
+    private func addMessageToTable() {
+        guard let lastIndex else { return }
+        let tableView = mainView.tableView
+        tableView.beginUpdates()
+        tableView.insertRows(at: [lastIndex], with: .fade)
+        tableView.endUpdates()
+        tableView.scrollToRow(at: lastIndex, at: .bottom, animated: true)
+    }
 }
 
 // MARK: - ChatScreenViewDelegate
@@ -84,18 +125,10 @@ extension ChatScreenViewController: ChatScreenViewDelegate {
     func sendButtonDidTap(text: String?) {
         guard let message = text else { return }
         let messageModel = MessageModel(isFromUser: true, message: message, timestamp: Date())
-        do {
-            try servicesProvider.coreDataManager.saveChatMessage(messageModel)
-            model.append(messageModel)
-            guard let lastIndex else { return }
-            let tableView = mainView.tableView
-            tableView.performBatchUpdates({ tableView.insertRows(at: [lastIndex], with: .bottom) })
-            tableView.scrollToRow(at: lastIndex, at: .bottom, animated: true)
-            mainView.resetInput()
-            mainView.setSendButtonEnabled(isEnabled: false)
-        } catch {
-            print(error)
-        }
+        saveMessage(messageModel)
+        mainView.resetInput()
+        mainView.setSendButtonEnabled(isEnabled: false)
+        sendMessage()
     }
     
     func messageTextFieldChanged(text: String?) {

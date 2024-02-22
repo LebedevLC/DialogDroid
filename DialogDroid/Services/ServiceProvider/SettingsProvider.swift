@@ -16,6 +16,8 @@ protocol ServicesProvider {
     var coreDataManager: CoreDataManager { get }
     
     var musicPlayerManager: MusicPlayerManager { get }
+    
+    var aiManager: AIManager { get }
 }
 
 final class DefaultServicesProvider: ServicesProvider {
@@ -26,6 +28,7 @@ final class DefaultServicesProvider: ServicesProvider {
     var settingsStorage: ApplicationSettings
     var coreDataManager: CoreDataManager
     var musicPlayerManager: MusicPlayerManager
+    var aiManager: AIManager
     
     static let shared = DefaultServicesProvider()
     
@@ -45,5 +48,6 @@ final class DefaultServicesProvider: ServicesProvider {
             settingsStorage: userDefaultStorage,
             musicPlayer: DefaultMusicPlayer()
         )
+        aiManager = DefaultAIManager(client: DefaultAIClient(token: ApplicationConstants.key))
     }
 }
