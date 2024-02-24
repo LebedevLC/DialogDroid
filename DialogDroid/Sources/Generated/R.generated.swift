@@ -76,9 +76,23 @@ struct _R {
     }
 
 
-    /// This `_R.string.localizable` struct is generated, and contains static references to 27 localization keys.
+    /// This `_R.string.localizable` struct is generated, and contains static references to 35 localization keys.
     struct localizable {
       let source: RswiftResources.StringResource.Source
+
+      /// en translation: Cancel
+      ///
+      /// Key: alertCancel
+      ///
+      /// Locales: en, ru
+      var alertCancel: RswiftResources.StringResource { .init(key: "alertCancel", tableName: "Localizable", source: source, developmentValue: "Cancel", comment: nil) }
+
+      /// en translation: Delete
+      ///
+      /// Key: alertDelete
+      ///
+      /// Locales: en, ru
+      var alertDelete: RswiftResources.StringResource { .init(key: "alertDelete", tableName: "Localizable", source: source, developmentValue: "Delete", comment: nil) }
 
       /// en translation: In this role, the bot becomes indispensable for finding information, performing daily tasks, and providing recommendations
       ///
@@ -164,12 +178,33 @@ struct _R {
       /// Locales: en, ru
       var chatRoleTitleTeacher: RswiftResources.StringResource { .init(key: "chatRoleTitleTeacher", tableName: "Localizable", source: source, developmentValue: "Teacher: Guide to the World of Knowledge", comment: nil) }
 
+      /// en translation: Type your text...
+      ///
+      /// Key: chatScreenPlaceholder
+      ///
+      /// Locales: en, ru
+      var chatScreenPlaceholder: RswiftResources.StringResource { .init(key: "chatScreenPlaceholder", tableName: "Localizable", source: source, developmentValue: "Type your text...", comment: nil) }
+
+      /// en translation: Chat Screen
+      ///
+      /// Key: chatScreenTitle
+      ///
+      /// Locales: en, ru
+      var chatScreenTitle: RswiftResources.StringResource { .init(key: "chatScreenTitle", tableName: "Localizable", source: source, developmentValue: "Chat Screen", comment: nil) }
+
       /// en translation: Start communicating with the AI
       ///
       /// Key: mainScreenCenterLabel
       ///
       /// Locales: en, ru
       var mainScreenCenterLabel: RswiftResources.StringResource { .init(key: "mainScreenCenterLabel", tableName: "Localizable", source: source, developmentValue: "Start communicating with the AI", comment: nil) }
+
+      /// en translation: Go to Chat
+      ///
+      /// Key: mainScreenGoToChatLabel
+      ///
+      /// Locales: en, ru
+      var mainScreenGoToChatLabel: RswiftResources.StringResource { .init(key: "mainScreenGoToChatLabel", tableName: "Localizable", source: source, developmentValue: "Go to Chat", comment: nil) }
 
       /// en translation: Main Screen
       ///
@@ -241,6 +276,13 @@ struct _R {
       /// Locales: en, ru
       var musicSettingsScreenTitle: RswiftResources.StringResource { .init(key: "musicSettingsScreenTitle", tableName: "Localizable", source: source, developmentValue: "Music settings", comment: nil) }
 
+      /// en translation: Role Changing
+      ///
+      /// Key: roleScreenTitle
+      ///
+      /// Locales: en, ru
+      var roleScreenTitle: RswiftResources.StringResource { .init(key: "roleScreenTitle", tableName: "Localizable", source: source, developmentValue: "Role Changing", comment: nil) }
+
       /// en translation: About application
       ///
       /// Key: settingsAboutItem
@@ -261,6 +303,20 @@ struct _R {
       ///
       /// Locales: en, ru
       var settingsMusicItem: RswiftResources.StringResource { .init(key: "settingsMusicItem", tableName: "Localizable", source: source, developmentValue: "Music", comment: nil) }
+
+      /// en translation: Do you really want to delete all messages? This action cannot be undone!
+      ///
+      /// Key: settingsScreenDeleteAllMessagesMessage
+      ///
+      /// Locales: en, ru
+      var settingsScreenDeleteAllMessagesMessage: RswiftResources.StringResource { .init(key: "settingsScreenDeleteAllMessagesMessage", tableName: "Localizable", source: source, developmentValue: "Do you really want to delete all messages? This action cannot be undone!", comment: nil) }
+
+      /// en translation: Delete all messages?
+      ///
+      /// Key: settingsScreenDeleteAllMessagesTitle
+      ///
+      /// Locales: en, ru
+      var settingsScreenDeleteAllMessagesTitle: RswiftResources.StringResource { .init(key: "settingsScreenDeleteAllMessagesTitle", tableName: "Localizable", source: source, developmentValue: "Delete all messages?", comment: nil) }
 
       /// en translation: Settings
       ///

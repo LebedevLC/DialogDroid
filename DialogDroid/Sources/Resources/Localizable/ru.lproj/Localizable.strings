@@ -8,12 +8,19 @@
 
 "mainScreenTitle" = "Главный экран";
 "mainScreenCenterLabel" = "Начните общение с ИИ";
+"mainScreenGoToChatLabel" = "Перейти в Чат";
 
 "settingsScreenTitle" = "Настройки";
 
 "settingsMusicItem" = "Музыка";
 "settingsDeleteChatItem" = "Удалить историю чата";
 "settingsAboutItem" = "О приложении";
+
+"settingsScreenDeleteAllMessagesTitle" = "Удалить все сообщения?";
+"settingsScreenDeleteAllMessagesMessage" = "Вы действительно хотите удалить все сообщения? Это действие нельзя отменить!";
+
+"alertCancel" = "Отменить";
+"alertDelete" = "Удалить";
 
 "musicSettingsScreenTitle" = "Настройки музыки";
 "musicSettingsScreenSwitchLabel" = "Включить фоновую музыку";
@@ -41,3 +48,7 @@
 "chatRoleTitleLover" = "Любовь: Виртуальное Чувство Интимности";
 "chatRoleShortTitleLover" = "Любовь";
 "chatRoleDescriptionLover" = "Достигая новых горизонтов в отношениях между человеком и машиной, бот в этой роли исследует комплексные чувства, такие как привязанность и любовь";
+
+"roleScreenTitle" = "Выбор роли";
+"chatScreenTitle" = "Экран чата";
+"chatScreenPlaceholder" = "Введите ваш текст...";

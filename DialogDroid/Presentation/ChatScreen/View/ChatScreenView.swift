@@ -47,7 +47,7 @@ final class ChatScreenView: UIView {
     private lazy var messageTextField: UITextField = {
         let textField = UITextField()
         textField.addTarget(self, action: #selector(messageTextFieldEditingChanged), for: .editingChanged)
-        textField.placeholder = "Type your text..."
+        textField.placeholder = R.string.localizable.chatScreenPlaceholder()
         textField.borderStyle = .roundedRect
         return textField
     }()

@@ -35,6 +35,11 @@ final class RoleScreenViewController: UIViewController {
         selectedIndex = indexPath
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureNavigationBar()
+    }
+    
     // MARK: - Actions
     
     @IBAction private func backButtonDidTap(_ sender: Any) {
@@ -50,6 +55,10 @@ final class RoleScreenViewController: UIViewController {
             UINib(nibName: "RoleScreenTableViewCell", bundle: nil),
             forCellReuseIdentifier: "RoleScreenTableViewCell"
         )
+    }
+    
+    private func configureNavigationBar() {
+        navigationItem.title = R.string.localizable.roleScreenTitle()
     }
 }
 

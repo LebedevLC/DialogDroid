@@ -14,6 +14,8 @@ class MainScreenViewController: UIViewController {
     
     @IBOutlet private weak var animatedViewContainer: UIView!
     @IBOutlet private weak var centerLabel: UILabel!
+    @IBOutlet private weak var goToChatView: CornerView!
+    @IBOutlet private weak var goToChatLabel: UILabel!
     
     private lazy var animatedLogo = {
         let view = LottieAnimationView()
@@ -33,6 +35,7 @@ class MainScreenViewController: UIViewController {
         setupLogoView()
         checkIfLaunchBefore()
         setupLabels()
+        setupGestures()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,18 +66,24 @@ class MainScreenViewController: UIViewController {
         present(activityVC, animated: true)
     }
     
-    @IBAction private func rolePlayChatButtonDidTap(_ sender: Any) {
-        print(#function)
-    }
-    
-    @IBAction private func plainChatButtonDidTap(_ sender: Any) {
-        performSegue(withIdentifier: "goToPlainChat", sender: nil)
+    @objc private func chatButtonDidTap() {
+        UIView.animate(withDuration: 0.1) { [self] in
+            goToChatLabel.transform = goToChatLabel.transform.scaledBy(x: 0.9, y: 0.9)
+        } completion: { _ in
+            self.goToChatLabel.transform = .identity
+            self.performSegue(withIdentifier: "goToPlainChat", sender: nil)
+        }
     }
     
     // MARK: - Private Methods
     
+    private func setupGestures() {
+        goToChatView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(chatButtonDidTap)))
+    }
+    
     private func setupLabels() {
         centerLabel.text = R.string.localizable.mainScreenCenterLabel()
+        goToChatLabel.text = R.string.localizable.mainScreenGoToChatLabel()
     }
     
     private func configureNavigationBar() {

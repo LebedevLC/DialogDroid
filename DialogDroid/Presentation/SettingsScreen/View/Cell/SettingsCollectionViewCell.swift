@@ -32,12 +32,4 @@ class SettingsCollectionViewCell: UICollectionViewCell {
     func configure(from model: SettingsScreenCollectionModel) {
         titleLabel.text = model.title
     }
-    
-    // MARK: - Actions
-
-    @IBAction private func nextButtonDidTap(_ sender: Any) {
-        
-    }
-    
-    // MARK: - Private Methods
 }

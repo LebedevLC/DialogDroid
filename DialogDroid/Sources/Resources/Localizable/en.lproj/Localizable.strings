@@ -8,12 +8,19 @@
 
 "mainScreenTitle" = "Main Screen";
 "mainScreenCenterLabel" = "Start communicating with the AI";
+"mainScreenGoToChatLabel" = "Go to Chat";
 
 "settingsScreenTitle" = "Settings";
 
 "settingsMusicItem" = "Music";
 "settingsDeleteChatItem" = "Delete all chat history";
 "settingsAboutItem" = "About application";
+
+"settingsScreenDeleteAllMessagesTitle" = "Delete all messages?";
+"settingsScreenDeleteAllMessagesMessage" = "Do you really want to delete all messages? This action cannot be undone!";
+
+"alertCancel" = "Cancel";
+"alertDelete" = "Delete";
 
 "musicSettingsScreenTitle" = "Music settings";
 "musicSettingsScreenSwitchLabel" = "Play background music";
@@ -41,3 +48,7 @@
 "chatRoleTitleLover" = "Love: Virtual Intimacy";
 "chatRoleShortTitleLover" = "Love";
 "chatRoleDescriptionLover" = "Reaching new horizons in human-machine relationships, the bot in this role explores complex feelings such as attachment and love";
+
+"roleScreenTitle" = "Role Changing";
+"chatScreenTitle" = "Chat Screen";
+"chatScreenPlaceholder" = "Type your text...";

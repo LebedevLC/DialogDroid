@@ -50,12 +50,18 @@ final class SettingsScreenViewController: UIViewController {
     }
     
     private func presentDeleteAllMessagesAlert(deleteHandler: @escaping () -> Void ) {
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in deleteHandler() }
+        let cancelAction = UIAlertAction(
+            title: R.string.localizable.alertCancel(),
+            style: .cancel
+        )
+        let deleteAction = UIAlertAction(
+            title: R.string.localizable.alertDelete(),
+            style: .destructive
+        ) { _ in deleteHandler() }
         let actions = [cancelAction, deleteAction]
         let alertController = UIAlertController(
-            title: "Delete all messages?",
-            message: "Do you really want to delete all messages? This action cannot be undone!",
+            title: R.string.localizable.settingsScreenDeleteAllMessagesTitle(),
+            message: R.string.localizable.settingsScreenDeleteAllMessagesMessage(),
             preferredStyle: .alert
         )
         actions.forEach({ alertController.addAction($0) })
@@ -108,7 +114,6 @@ extension SettingsScreenViewController: UICollectionViewDelegate {
                 do {
                     try self?.servicesProvider.coreDataManager.deleteAllMessages()
                     let result = try self?.servicesProvider.coreDataManager.getAllChatMessages()
-                    print(result)
                 } catch {
                     print(error)
                 }

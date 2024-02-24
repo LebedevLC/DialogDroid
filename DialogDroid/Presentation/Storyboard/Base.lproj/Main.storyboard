@@ -23,93 +23,57 @@
                                     <constraint firstAttribute="height" constant="64" id="8gZ-A9-RCH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="36"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="itD-yF-TVW" userLabel="AnimatedContainerView">
                                 <rect key="frame" x="24" y="291" width="345" height="297"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaa-Jr-ef0" customClass="CornerView" customModule="DialogDroid" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="652" width="195.66666666666666" height="200"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfP-R4-bEg">
-                                        <rect key="frame" x="8" y="78" width="179.66666666666666" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="nWk-wo-YZG"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Role-Play Chat">
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="rolePlayChatButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ktj-0j-0Fg"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="tfP-R4-bEg" firstAttribute="leading" secondItem="iaa-Jr-ef0" secondAttribute="leading" constant="8" id="Jd6-zE-tPP"/>
-                                    <constraint firstAttribute="height" constant="200" id="ifA-KM-Na4"/>
-                                    <constraint firstItem="tfP-R4-bEg" firstAttribute="centerX" secondItem="iaa-Jr-ef0" secondAttribute="centerX" id="ipX-bd-HPu"/>
-                                    <constraint firstAttribute="trailing" secondItem="tfP-R4-bEg" secondAttribute="trailing" constant="8" id="qzy-Iw-5Gt"/>
-                                    <constraint firstItem="tfP-R4-bEg" firstAttribute="centerY" secondItem="iaa-Jr-ef0" secondAttribute="centerY" id="vtD-5D-bQg"/>
-                                </constraints>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJa-rJ-YcY" customClass="CornerView" customModule="DialogDroid" customModuleProvider="target">
-                                <rect key="frame" x="197.66666666666663" y="652" width="195.33333333333337" height="200"/>
+                                <rect key="frame" x="0.0" y="652" width="393" height="200"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctn-yu-5U2">
-                                        <rect key="frame" x="8" y="78" width="179.33333333333334" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="EHa-nk-g6O"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Chat">
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="plainChatButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IA6-aR-Phg"/>
-                                        </connections>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to Chat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="lp9-p9-ZZR">
+                                        <rect key="frame" x="24" y="80" width="345" height="40"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="36"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="ctn-yu-5U2" firstAttribute="centerX" secondItem="rJa-rJ-YcY" secondAttribute="centerX" id="0WU-cj-WFH"/>
-                                    <constraint firstAttribute="trailing" secondItem="ctn-yu-5U2" secondAttribute="trailing" constant="8" id="22B-KW-oQJ"/>
-                                    <constraint firstItem="ctn-yu-5U2" firstAttribute="centerY" secondItem="rJa-rJ-YcY" secondAttribute="centerY" id="2CK-dc-GCD"/>
+                                    <constraint firstAttribute="trailing" secondItem="lp9-p9-ZZR" secondAttribute="trailing" constant="24" id="6e2-i5-xsr"/>
+                                    <constraint firstItem="lp9-p9-ZZR" firstAttribute="centerY" secondItem="rJa-rJ-YcY" secondAttribute="centerY" id="7cQ-Jn-q6e"/>
                                     <constraint firstAttribute="height" constant="200" id="Vkh-7Z-PHN"/>
-                                    <constraint firstItem="ctn-yu-5U2" firstAttribute="leading" secondItem="rJa-rJ-YcY" secondAttribute="leading" constant="8" id="YSD-az-eIL"/>
+                                    <constraint firstItem="lp9-p9-ZZR" firstAttribute="leading" secondItem="rJa-rJ-YcY" secondAttribute="leading" constant="24" id="n5Y-Mv-ORQ"/>
+                                    <constraint firstItem="lp9-p9-ZZR" firstAttribute="centerX" secondItem="rJa-rJ-YcY" secondAttribute="centerX" id="okw-Lh-snN"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="itD-yF-TVW" firstAttribute="top" secondItem="xqQ-K1-Aee" secondAttribute="bottom" constant="24" id="4hp-hM-IKp"/>
-                            <constraint firstItem="iaa-Jr-ef0" firstAttribute="top" secondItem="itD-yF-TVW" secondAttribute="bottom" constant="64" id="7BC-gw-4PQ"/>
-                            <constraint firstAttribute="bottom" secondItem="iaa-Jr-ef0" secondAttribute="bottom" id="9Ue-de-JFq"/>
                             <constraint firstAttribute="bottom" secondItem="rJa-rJ-YcY" secondAttribute="bottom" id="AIC-Pn-lXP"/>
+                            <constraint firstItem="rJa-rJ-YcY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FCU-YM-hqU"/>
                             <constraint firstItem="xqQ-K1-Aee" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Jd4-Gh-6h3"/>
                             <constraint firstItem="xqQ-K1-Aee" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="LUs-Jf-VYm"/>
-                            <constraint firstItem="rJa-rJ-YcY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="1" id="UQg-KM-6Rb"/>
+                            <constraint firstItem="rJa-rJ-YcY" firstAttribute="top" secondItem="itD-yF-TVW" secondAttribute="bottom" constant="64" id="RoV-Hf-5wo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xqQ-K1-Aee" secondAttribute="trailing" constant="24" id="fBN-1u-BcL"/>
                             <constraint firstItem="itD-yF-TVW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="mVJ-72-Sg1"/>
-                            <constraint firstItem="iaa-Jr-ef0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="se7-sp-HEs"/>
                             <constraint firstAttribute="trailing" secondItem="rJa-rJ-YcY" secondAttribute="trailing" id="tdT-5q-ebK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerX" secondItem="iaa-Jr-ef0" secondAttribute="trailing" constant="1" id="uKY-GP-Jqu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="itD-yF-TVW" secondAttribute="trailing" constant="24" id="xlc-d2-oVD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="CB0-dw-TWu">
                         <barButtonItem key="leftBarButtonItem" title="Settings" image="gearshape" catalog="system" style="plain" id="p7y-23-i4A">
-                            <color key="tintColor" systemColor="labelColor"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="settingsButtonDidTap:" destination="BYZ-38-t0r" id="dqk-oi-hWc"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Share" image="link.circle" catalog="system" style="plain" id="GXB-an-kyH">
-                            <color key="tintColor" systemColor="labelColor"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="shareButtonDidTap:" destination="BYZ-38-t0r" id="PZN-sY-C5Z"/>
                             </connections>
@@ -118,13 +82,15 @@
                     <connections>
                         <outlet property="animatedViewContainer" destination="itD-yF-TVW" id="Yxz-mK-1Ea"/>
                         <outlet property="centerLabel" destination="xqQ-K1-Aee" id="SfZ-i5-z8K"/>
+                        <outlet property="goToChatLabel" destination="lp9-p9-ZZR" id="5FR-p4-Hz2"/>
+                        <outlet property="goToChatView" destination="rJa-rJ-YcY" id="3nB-La-3GG"/>
                         <segue destination="2KU-VY-I1T" kind="show" identifier="goToSettings" id="dFu-Pd-RXe"/>
                         <segue destination="oC0-qU-7ho" kind="show" identifier="goToPlainChat" id="oBw-Xn-7ME"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066.4122137404579" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="1065" y="-215"/>
         </scene>
         <!--ChatScreen-->
         <scene sceneID="IFk-Ea-6yY">
@@ -138,7 +104,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="ChatScreen" id="61z-JA-Wtc">
                         <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="tGf-ef-G68">
-                            <color key="tintColor" systemColor="labelColor"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="backButtonDidTap:" destination="oC0-qU-7ho" id="CIM-5J-Y37"/>
                             </connections>
@@ -211,7 +177,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Kp-YX-owJ"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3Kp-YX-owJ" firstAttribute="bottom" secondItem="YFa-8X-0EB" secondAttribute="bottom" constant="8" id="Tym-nd-kQd"/>
                             <constraint firstItem="3Kp-YX-owJ" firstAttribute="trailing" secondItem="YFa-8X-0EB" secondAttribute="trailing" constant="16" id="UA8-lk-QJA"/>
@@ -221,7 +187,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title2" style="editor" id="nO1-yR-qZX">
                         <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="vmd-0B-WsG">
-                            <color key="tintColor" systemColor="labelColor"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="backButtonDidTap:" destination="2KU-VY-I1T" id="RCB-3f-ccl"/>
                             </connections>
@@ -234,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OsL-wM-vRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1734" y="-627"/>
+            <point key="canvasLocation" x="1969" y="-608"/>
         </scene>
         <!--MusicSettings-->
         <scene sceneID="2kN-Hn-Xau">
@@ -261,7 +227,7 @@
                                     <constraint firstAttribute="height" constant="24" id="0TE-Z3-SKL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mke-Iu-2H0">
@@ -276,7 +242,7 @@
                             </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kge-YD-fuc"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7Hm-8c-sb4" firstAttribute="centerY" secondItem="Mke-Iu-2H0" secondAttribute="centerY" id="4Ak-53-Ije"/>
                             <constraint firstItem="wU5-jd-5zl" firstAttribute="top" secondItem="Mke-Iu-2H0" secondAttribute="bottom" constant="16" id="Nc3-gf-seo"/>
@@ -291,7 +257,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="MusicSettings" id="IGa-aX-JUP">
                         <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="oo6-Sh-q0X">
-                            <color key="tintColor" systemColor="labelColor"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="backButtonDidTap:" destination="PgD-x4-Bwp" id="nff-LC-nOg"/>
                             </connections>
@@ -305,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrh-CN-udW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2750" y="-622"/>
+            <point key="canvasLocation" x="2775" y="-608"/>
         </scene>
         <!--Launch Screen View Controller-->
         <scene sceneID="EIx-Z8-guh">
@@ -346,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heY-hX-bCe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066" y="704"/>
+            <point key="canvasLocation" x="-785" y="-215"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jsI-nn-NvL">
@@ -364,21 +330,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4O-Kp-0Nc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.69465648854961" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="138" y="-215"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.left.circle" catalog="system" width="128" height="123"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="link.circle" catalog="system" width="128" height="123"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

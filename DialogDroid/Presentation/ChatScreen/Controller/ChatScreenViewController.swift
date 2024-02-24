@@ -65,7 +65,7 @@ final class ChatScreenViewController: UIViewController {
     // MARK: - Private Methods
     
     private func configureNavigationBar() {
-        navigationItem.title = "Chat screen"
+        navigationItem.title = R.string.localizable.chatScreenTitle()
     }
     
     private func setupModel() {
