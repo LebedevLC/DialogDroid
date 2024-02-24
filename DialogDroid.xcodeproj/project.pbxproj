@@ -29,6 +29,7 @@
 		465EC5292B6A9FAA00451537 /* ApplicationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EC5282B6A9FAA00451537 /* ApplicationStorage.swift */; };
 		465EC52C2B6AA0DC00451537 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EC52B2B6AA0DC00451537 /* Bundle+Extensions.swift */; };
 		465EC52E2B6AA1D400451537 /* SettingsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EC52D2B6AA1D400451537 /* SettingsProvider.swift */; };
+		4663B2EF2B89FBB8006067F1 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4663B2EE2B89FBB8006067F1 /* LaunchScreenViewController.swift */; };
 		4666BE482B62D74B00D40241 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666BE472B62D74B00D40241 /* CornerView.swift */; };
 		4669DFBB2B87C66300227907 /* AIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669DFBA2B87C66300227907 /* AIManager.swift */; };
 		4669DFBF2B87C85100227907 /* NotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4669DFBE2B87C85100227907 /* NotLocalizable.strings */; };
@@ -91,6 +92,7 @@
 		465EC5282B6A9FAA00451537 /* ApplicationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStorage.swift; sourceTree = "<group>"; };
 		465EC52B2B6AA0DC00451537 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		465EC52D2B6AA1D400451537 /* SettingsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProvider.swift; sourceTree = "<group>"; };
+		4663B2EE2B89FBB8006067F1 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		4666BE472B62D74B00D40241 /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		4669DFBA2B87C66300227907 /* AIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIManager.swift; sourceTree = "<group>"; };
 		4669DFBE2B87C85100227907 /* NotLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = NotLocalizable.strings; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				462B74D52B62C4B500319B06 /* LaunchScreen.storyboard */,
+				4663B2EE2B89FBB8006067F1 /* LaunchScreenViewController.swift */,
 			);
 			path = LaunchScreen;
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 				465EC5202B69547100451537 /* MusicScreenModel.swift in Sources */,
 				465114FB2B641C450047F357 /* SettingsCollectionViewCell.swift in Sources */,
 				4611C0892B7BC1D200F56C22 /* ChatScreenViewController.swift in Sources */,
+				4663B2EF2B89FBB8006067F1 /* LaunchScreenViewController.swift in Sources */,
 				465EC5292B6A9FAA00451537 /* ApplicationStorage.swift in Sources */,
 				46BFE2A32B850C1600FDA585 /* AIClientEndpoint.swift in Sources */,
 				46BFE2A52B850CD100FDA585 /* AIClientCommand.swift in Sources */,

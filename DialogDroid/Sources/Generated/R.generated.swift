@@ -484,10 +484,14 @@ struct _R {
       let bundle: Foundation.Bundle
 
       let name = "Main"
+
+      var splashVC: RswiftResources.StoryboardViewControllerIdentifier<LaunchScreenViewController> { .init(identifier: "splashVC", storyboard: name, bundle: bundle) }
+
       func validate() throws {
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "arrow.left.circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'arrow.left.circle' is used in storyboard 'Main', but couldn't be loaded.") } }
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "gearshape") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'gearshape' is used in storyboard 'Main', but couldn't be loaded.") } }
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "link.circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'link.circle' is used in storyboard 'Main', but couldn't be loaded.") } }
+        if splashVC() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'splashVC' could not be loaded from storyboard 'Main' as 'LaunchScreenViewController'.") }
       }
     }
   }

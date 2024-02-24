@@ -307,6 +307,47 @@
             </objects>
             <point key="canvasLocation" x="2750" y="-622"/>
         </scene>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="EIx-Z8-guh">
+            <objects>
+                <viewController storyboardIdentifier="splashVC" id="zk7-5e-v2m" customClass="LaunchScreenViewController" customModule="DialogDroid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hz5-aD-TmK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdT-eZ-O9Q">
+                                <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="34a-g3-Em9"/>
+                                    <constraint firstAttribute="width" constant="200" id="m2Q-7i-BD9"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DialogDroid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti8-Gj-5gz">
+                                <rect key="frame" x="24" y="242.33333333333334" width="345" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UWe-0x-gWb"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UWe-0x-gWb" firstAttribute="trailing" secondItem="ti8-Gj-5gz" secondAttribute="trailing" constant="24" id="6Cv-vQ-rrg"/>
+                            <constraint firstItem="sdT-eZ-O9Q" firstAttribute="centerY" secondItem="Hz5-aD-TmK" secondAttribute="centerY" id="DGB-e9-ENx"/>
+                            <constraint firstItem="ti8-Gj-5gz" firstAttribute="leading" secondItem="UWe-0x-gWb" secondAttribute="leading" constant="24" id="LeH-m7-caO"/>
+                            <constraint firstItem="sdT-eZ-O9Q" firstAttribute="centerX" secondItem="Hz5-aD-TmK" secondAttribute="centerX" id="XvL-zD-F4q"/>
+                            <constraint firstItem="sdT-eZ-O9Q" firstAttribute="top" secondItem="ti8-Gj-5gz" secondAttribute="bottom" constant="50" id="y1J-ly-630"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationContainerView" destination="sdT-eZ-O9Q" id="8sv-k1-tDI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="heY-hX-bCe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066" y="704"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="jsI-nn-NvL">
             <objects>
@@ -337,7 +378,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

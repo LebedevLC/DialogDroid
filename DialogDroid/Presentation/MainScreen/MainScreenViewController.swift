@@ -15,6 +15,7 @@ class MainScreenViewController: UIViewController {
     @IBOutlet private weak var centerLabel: UILabel!
     
     private let servicesProvider: ServicesProvider = DefaultServicesProvider.shared
+    private var isNeedShowSplashScreen: Bool = true
     
     // MARK: - Life Cycle
     
@@ -27,6 +28,7 @@ class MainScreenViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavigationBar()
+        showSplashScreen()
     }
     
     // MARK: - Actions
@@ -49,8 +51,6 @@ class MainScreenViewController: UIViewController {
         performSegue(withIdentifier: "goToPlainChat", sender: nil)
     }
     
-    // MARK: - Public Methods
-    
     // MARK: - Private Methods
     
     private func setupLabels() {
@@ -65,6 +65,21 @@ class MainScreenViewController: UIViewController {
         if !servicesProvider.applicationStorage.isLaunchedBefore {
             servicesProvider.applicationStorage.isLaunchedBefore = true
         }
+    }
+    
+    private func showSplashScreen() {
+        guard isNeedShowSplashScreen else { return }
+        isNeedShowSplashScreen = false
+        let storyboard = UIStoryboard(name: R.storyboard.main.name, bundle: nil)
+        guard let splashScreenViewController = storyboard.instantiateViewController(
+            withIdentifier: "splashVC"
+        ) as? LaunchScreenViewController
+        else { return }
+        splashScreenViewController.animationCompletion = { [weak self] in
+            self?.dismiss(animated: false)
+        }
+        splashScreenViewController.modalPresentationStyle = .fullScreen
+        present(splashScreenViewController, animated: false)
     }
 }
 
