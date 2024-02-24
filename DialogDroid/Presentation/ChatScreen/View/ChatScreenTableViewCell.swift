@@ -5,6 +5,7 @@
 //  Created by Сергей Чумовских  on 13.02.2024.
 //
 
+import Lottie
 import UIKit
 
 final class ChatScreenTableViewCell: UITableViewCell {
@@ -12,12 +13,20 @@ final class ChatScreenTableViewCell: UITableViewCell {
     // MARK: - Private Properties
     
     private let backgroundCellView = UIView()
-    private let avatarImageView = UIImageView()
+    private let avatarImageView = UIImageView(image: R.image.avatarImage())
     private let dateLabel = UILabel()
     private let messageLabel = {
         let label = UILabel()
         label.numberOfLines = 0
         return label
+    }()
+    
+    private lazy var animatedLogo = {
+        let view = LottieAnimationView()
+        view.animation = .named("Animation3")
+        view.loopMode = .loop
+        view.alpha = 0
+        return view
     }()
     
     private lazy var leftSideAvatarViewConstraint = {
@@ -64,7 +73,9 @@ final class ChatScreenTableViewCell: UITableViewCell {
           rightSideMessageLabelConstraint ].forEach({ $0.isActive = false })
         messageLabel.text = nil
         dateLabel.text = nil
-        avatarImageView.backgroundColor = .black
+        animatedLogo.pause()
+        animatedLogo.alpha = 0
+        avatarImageView.alpha = 1
         messageLabel.textAlignment = .left
     }
     
@@ -80,7 +91,15 @@ final class ChatScreenTableViewCell: UITableViewCell {
         ])
         
         dateLabel.text = model.timestamp.formatted(date: .omitted, time: .omitted)
-        avatarImageView.backgroundColor = model.isFromUser ? .red : .green
+        
+        if !model.isFromUser {
+            animatedLogo.play()
+            animatedLogo.alpha = 1
+            avatarImageView.alpha = 0
+        } else {
+            avatarImageView.alpha = 1
+        }
+        
         layoutIfNeeded()
     }
     
@@ -103,7 +122,7 @@ final class ChatScreenTableViewCell: UITableViewCell {
     }
     
     private func addSubviews() {
-        [backgroundCellView, avatarImageView, dateLabel, messageLabel].forEach({
+        [backgroundCellView, avatarImageView, animatedLogo, dateLabel, messageLabel].forEach({
             $0.translatesAutoresizingMaskIntoConstraints = false
             contentView.addSubview($0)
         })
@@ -114,6 +133,11 @@ final class ChatScreenTableViewCell: UITableViewCell {
             avatarImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             avatarImageView.widthAnchor.constraint(equalToConstant: 40),
             avatarImageView.heightAnchor.constraint(equalToConstant: 40),
+            
+            animatedLogo.leadingAnchor.constraint(equalTo: avatarImageView.leadingAnchor),
+            animatedLogo.trailingAnchor.constraint(equalTo: avatarImageView.trailingAnchor),
+            animatedLogo.topAnchor.constraint(equalTo: avatarImageView.topAnchor),
+            animatedLogo.bottomAnchor.constraint(equalTo: avatarImageView.bottomAnchor),
             
             messageLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 4),
             messageLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),

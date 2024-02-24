@@ -5,6 +5,7 @@
 //  Created by Сергей Чумовских  on 25.01.2024.
 //
 
+import Lottie
 import UIKit
 
 class MainScreenViewController: UIViewController {
@@ -14,6 +15,14 @@ class MainScreenViewController: UIViewController {
     @IBOutlet private weak var animatedViewContainer: UIView!
     @IBOutlet private weak var centerLabel: UILabel!
     
+    private lazy var animatedLogo = {
+        let view = LottieAnimationView()
+        view.animation = .named("Animation2")
+        view.loopMode = .loop
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private let servicesProvider: ServicesProvider = DefaultServicesProvider.shared
     private var isNeedShowSplashScreen: Bool = true
     
@@ -21,6 +30,7 @@ class MainScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLogoView()
         checkIfLaunchBefore()
         setupLabels()
     }
@@ -29,6 +39,16 @@ class MainScreenViewController: UIViewController {
         super.viewWillAppear(animated)
         configureNavigationBar()
         showSplashScreen()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animatedLogo.play()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        animatedLogo.pause()
     }
     
     // MARK: - Actions
@@ -81,20 +101,14 @@ class MainScreenViewController: UIViewController {
         splashScreenViewController.modalPresentationStyle = .fullScreen
         present(splashScreenViewController, animated: false)
     }
-}
-
-// MARK: - Segue
-
-extension MainScreenViewController {
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "goToSettings":
-            guard let destinationController = segue.destination as? SettingsScreenViewController else { return }
-            // some data
-            //destinationController
-        default:
-            super.prepare(for: segue, sender: sender)
-        }
+    private func setupLogoView() {
+        view.addSubview(animatedLogo)
+        NSLayoutConstraint.activate([
+            animatedLogo.leadingAnchor.constraint(equalTo: animatedViewContainer.leadingAnchor),
+            animatedLogo.trailingAnchor.constraint(equalTo: animatedViewContainer.trailingAnchor),
+            animatedLogo.topAnchor.constraint(equalTo: animatedViewContainer.topAnchor),
+            animatedLogo.bottomAnchor.constraint(equalTo: animatedViewContainer.bottomAnchor)
+        ])
     }
 }

@@ -308,8 +308,8 @@ struct _R {
   struct image {
     let bundle: Foundation.Bundle
 
-    /// Image `test`.
-    var test: RswiftResources.ImageResource { .init(name: "test", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+    /// Image `avatarImage`.
+    var avatarImage: RswiftResources.ImageResource { .init(name: "avatarImage", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
   /// This `_R.info` struct is generated, and contains static references to 1 properties.
@@ -361,9 +361,18 @@ struct _R {
     }
   }
 
-  /// This `_R.file` struct is generated, and contains static references to 7 resource files.
+  /// This `_R.file` struct is generated, and contains static references to 10 resource files.
   struct file {
     let bundle: Foundation.Bundle
+
+    /// Resource file `Animation1.json`.
+    var animation1Json: RswiftResources.FileResource { .init(name: "Animation1", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `Animation2.json`.
+    var animation2Json: RswiftResources.FileResource { .init(name: "Animation2", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `Animation3.json`.
+    var animation3Json: RswiftResources.FileResource { .init(name: "Animation3", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
 
     /// Resource file `music1.mp3`.
     var music1Mp3: RswiftResources.FileResource { .init(name: "music1", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }

@@ -30,6 +30,9 @@
 		465EC52C2B6AA0DC00451537 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EC52B2B6AA0DC00451537 /* Bundle+Extensions.swift */; };
 		465EC52E2B6AA1D400451537 /* SettingsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EC52D2B6AA1D400451537 /* SettingsProvider.swift */; };
 		4663B2EF2B89FBB8006067F1 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4663B2EE2B89FBB8006067F1 /* LaunchScreenViewController.swift */; };
+		4663B2F42B8A059A006067F1 /* Animation1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4663B2F12B8A059A006067F1 /* Animation1.json */; };
+		4663B2F52B8A059A006067F1 /* Animation3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4663B2F22B8A059A006067F1 /* Animation3.json */; };
+		4663B2F62B8A059A006067F1 /* Animation2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4663B2F32B8A059A006067F1 /* Animation2.json */; };
 		4666BE482B62D74B00D40241 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666BE472B62D74B00D40241 /* CornerView.swift */; };
 		4669DFBB2B87C66300227907 /* AIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669DFBA2B87C66300227907 /* AIManager.swift */; };
 		4669DFBF2B87C85100227907 /* NotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4669DFBE2B87C85100227907 /* NotLocalizable.strings */; };
@@ -93,6 +96,9 @@
 		465EC52B2B6AA0DC00451537 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		465EC52D2B6AA1D400451537 /* SettingsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProvider.swift; sourceTree = "<group>"; };
 		4663B2EE2B89FBB8006067F1 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		4663B2F12B8A059A006067F1 /* Animation1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation1.json; sourceTree = "<group>"; };
+		4663B2F22B8A059A006067F1 /* Animation3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation3.json; sourceTree = "<group>"; };
+		4663B2F32B8A059A006067F1 /* Animation2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation2.json; sourceTree = "<group>"; };
 		4666BE472B62D74B00D40241 /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		4669DFBA2B87C66300227907 /* AIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIManager.swift; sourceTree = "<group>"; };
 		4669DFBE2B87C85100227907 /* NotLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = NotLocalizable.strings; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 		462B74DF2B62C4E800319B06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4663B2F02B8A0590006067F1 /* Animations */,
 				46D1B35C2B78C7F300BF323E /* Music */,
 				46E8FA1F2B71470700BCA83E /* Localizable */,
 				462B74D32B62C4B500319B06 /* Assets.xcassets */,
@@ -391,6 +398,16 @@
 				46EAE1202B7F86E400082E39 /* UIView.AnimationOptions+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4663B2F02B8A0590006067F1 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				4663B2F12B8A059A006067F1 /* Animation1.json */,
+				4663B2F32B8A059A006067F1 /* Animation2.json */,
+				4663B2F22B8A059A006067F1 /* Animation3.json */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		4666BE452B62D72E00D40241 /* CustomElements */ = {
@@ -619,9 +636,12 @@
 				462B74D72B62C4B500319B06 /* LaunchScreen.storyboard in Resources */,
 				46D1B3662B78C80000BF323E /* music3.mp3 in Resources */,
 				46D1B3672B78C80000BF323E /* music4.mp3 in Resources */,
+				4663B2F52B8A059A006067F1 /* Animation3.json in Resources */,
 				46D1B3652B78C80000BF323E /* music1.mp3 in Resources */,
+				4663B2F62B8A059A006067F1 /* Animation2.json in Resources */,
 				46E8FA222B71473200BCA83E /* Localizable.strings in Resources */,
 				46D1B3692B78C80000BF323E /* music5.mp3 in Resources */,
+				4663B2F42B8A059A006067F1 /* Animation1.json in Resources */,
 				462B74D42B62C4B500319B06 /* Assets.xcassets in Resources */,
 				462B74D22B62C4B400319B06 /* Main.storyboard in Resources */,
 				465114FC2B641C450047F357 /* SettingsCollectionViewCell.xib in Resources */,
